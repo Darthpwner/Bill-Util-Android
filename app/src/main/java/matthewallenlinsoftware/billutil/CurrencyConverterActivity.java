@@ -1,7 +1,13 @@
 package matthewallenlinsoftware.billutil;
 
-/**
- * Created by Darthpwner on 1/28/17.
- */
-public class CurrencyConverterActivity {
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class CurrencyConverterActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_currency_converter);
+    }
 }

@@ -18,6 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CurrencyConverterActivity" />
+        <activity android:name=".IncomeCalculatorActivity" />
+        <activity android:name=".RentCalculatorActivity" />
+        <activity android:name=".SalesTaxCalculatorActivity" />
+        <activity android:name=".TipCalculatorActivity"></activity>
     </application>
 
 </manifest>
