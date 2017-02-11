@@ -1,10 +1,12 @@
 package matthewallenlinsoftware.billutil;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -36,5 +38,30 @@ public class StartActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    // onClick transitions
+    public void onClickIncomeCalculator(View view) {
+        //Starting a new Intent
+        Intent nextScreen = new Intent(getApplicationContext(), IncomeCalculatorActivity.class);
+
+        //Sending data to another Activity
+        startActivity(nextScreen);
+    }
+
+    public void onClickCurrencyConverter(View view) {
+        //Starting a new Intent
+        Intent nextScreen = new Intent(getApplicationContext(), CurrencyConverterActivity.class);
+
+        //Sending data to another Activity
+        startActivity(nextScreen);
+    }
+
+    public void onClickRentCalculator(View view) {
+        //Starting a new Intent
+        Intent nextScreen = new Intent(getApplicationContext(), RentCalculatorActivity.class);
+
+        //Sending data to another Activity
+        startActivity(nextScreen);
     }
 }
