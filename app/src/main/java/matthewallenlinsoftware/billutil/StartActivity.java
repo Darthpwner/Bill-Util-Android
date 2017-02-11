@@ -41,6 +41,22 @@ public class StartActivity extends AppCompatActivity {
     }
 
     // onClick transitions
+    public void onClickTipCalculator(View view) {
+        //Starting a new Intent
+        Intent nextScreen = new Intent(getApplicationContext(), TipCalculatorActivity.class);
+
+        //Sending data to another Activity
+        startActivity(nextScreen);
+    }
+
+    public void onClickSalesTaxCalculator(View view) {
+        //Starting a new Intent
+        Intent nextScreen = new Intent(getApplicationContext(), SalesTaxCalculatorActivity.class);
+
+        //Sending data to another Activity
+        startActivity(nextScreen);
+    }
+
     public void onClickIncomeCalculator(View view) {
         //Starting a new Intent
         Intent nextScreen = new Intent(getApplicationContext(), IncomeCalculatorActivity.class);

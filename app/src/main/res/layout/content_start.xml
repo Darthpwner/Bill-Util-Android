@@ -70,7 +70,7 @@
         android:background="@null"
         android:layout_below="@+id/button3"
         android:layout_alignStart="@+id/button5"
-        android:onClick="onClickConvertCurrency" />
+        android:onClick="onClickCurrencyConverter" />
 
     <Button
         android:layout_width="wrap_content"
@@ -82,5 +82,5 @@
         android:textColor="#00a6ff"
         android:textStyle="bold"
         android:background="@null"
-        android:onClick="onClickCalculateRent" />
+        android:onClick="onClickRentCalculator" />
 </RelativeLayout>
