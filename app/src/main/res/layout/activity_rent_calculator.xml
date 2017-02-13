@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Monthly Base Rent: "
-        android:id="@+id/textView15"
+        android:id="@+id/monthlyBaseRentTextView"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="50dp"
@@ -25,8 +25,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Electric: "
-        android:id="@+id/textView16"
-        android:layout_below="@+id/textView15"
+        android:id="@+id/electricTextView"
+        android:layout_below="@+id/monthlyBaseRentTextView"
         android:layout_alignParentStart="true"
         android:textSize="17sp"
         android:layout_marginTop="15dp" />
@@ -35,9 +35,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Gas: "
-        android:id="@+id/textView17"
+        android:id="@+id/gasTextView"
         android:textSize="17sp"
-        android:layout_below="@+id/textView16"
+        android:layout_below="@+id/electricTextView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="15dp" />
 
@@ -45,9 +45,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Water: "
-        android:id="@+id/textView18"
+        android:id="@+id/waterTextView"
         android:textSize="17sp"
-        android:layout_below="@+id/textView17"
+        android:layout_below="@+id/gasTextView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="15dp" />
 
@@ -55,9 +55,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Internet: "
-        android:id="@+id/textView19"
+        android:id="@+id/internetTextView"
         android:textSize="17sp"
-        android:layout_below="@+id/textView18"
+        android:layout_below="@+id/waterTextView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="15dp" />
 
@@ -65,9 +65,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Subletter: "
-        android:id="@+id/textView20"
+        android:id="@+id/subletterTextView"
         android:textSize="17sp"
-        android:layout_below="@+id/textView19"
+        android:layout_below="@+id/internetTextView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="15dp" />
 
@@ -75,9 +75,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Parking Spot Cost: "
-        android:id="@+id/textView21"
+        android:id="@+id/parkingSpotCostTextView"
         android:textSize="17sp"
-        android:layout_below="@+id/textView20"
+        android:layout_below="@+id/subletterTextView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="25dp" />
 
@@ -85,9 +85,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Parking Spot Subleased: "
-        android:id="@+id/textView22"
+        android:id="@+id/parkingSpotSubleasedTextView"
         android:textSize="17sp"
-        android:layout_below="@+id/textView21"
+        android:layout_below="@+id/parkingSpotCostTextView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="15dp" />
 
@@ -95,9 +95,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="# of Roommates: "
-        android:id="@+id/textView23"
+        android:id="@+id/numberOfRoommatesTextView"
         android:textSize="17sp"
-        android:layout_below="@+id/textView22"
+        android:layout_below="@+id/parkingSpotSubleasedTextView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="15dp" />
 
@@ -105,9 +105,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Total Cost: "
-        android:id="@+id/textView24"
+        android:id="@+id/totalCostTextView"
         android:textSize="17sp"
-        android:layout_below="@+id/textView23"
+        android:layout_below="@+id/numberOfRoommatesTextView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="15dp" />
 
@@ -115,9 +115,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Total Cost Per Person: "
-        android:id="@+id/textView25"
+        android:id="@+id/totalCostPerPersonTextView"
         android:textSize="17sp"
-        android:layout_below="@+id/textView24"
+        android:layout_below="@+id/totalCostTextView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="15dp" />
 
@@ -125,7 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Rent Calculator"
-        android:id="@+id/textView26"
+        android:id="@+id/rentCalculatorTextView"
         android:textSize="24sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -135,67 +135,73 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/monthlyBaseRentEditText"
         android:background="#ff0000"
-        android:layout_alignBottom="@+id/textView15"
-        android:layout_alignStart="@+id/editText2" />
+        android:layout_alignBottom="@+id/monthlyBaseRentTextView"
+        android:layout_alignStart="@+id/electricEditText"
+        android:text="0" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/electricEditText"
         android:background="#ff0000"
-        android:layout_alignTop="@+id/textView16"
-        android:layout_alignStart="@+id/editText3" />
+        android:layout_alignTop="@+id/electricTextView"
+        android:layout_alignStart="@+id/gasEditText"
+        android:text="0" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/editText3"
+        android:id="@+id/gasEditText"
         android:background="#ff0000"
-        android:layout_above="@+id/textView18"
-        android:layout_alignStart="@+id/editText4" />
+        android:layout_above="@+id/waterTextView"
+        android:layout_alignStart="@+id/waterEditText"
+        android:text="0" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/editText4"
+        android:id="@+id/waterEditText"
         android:background="#ff0000"
-        android:layout_alignTop="@+id/textView18"
-        android:layout_alignStart="@+id/editText5" />
+        android:layout_alignTop="@+id/waterTextView"
+        android:layout_alignStart="@+id/internetEditText"
+        android:text="0" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/editText5"
+        android:id="@+id/internetEditText"
         android:background="#ff0000"
-        android:layout_above="@+id/textView20"
-        android:layout_alignStart="@+id/editText7" />
+        android:layout_above="@+id/subletterTextView"
+        android:layout_alignStart="@+id/parkingSpotCostEditText"
+        android:text="0" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/editText7"
-        android:layout_above="@+id/textView22"
-        android:layout_toEndOf="@+id/textView22"
-        android:background="#ffb700" />
+        android:id="@+id/parkingSpotCostEditText"
+        android:layout_above="@+id/parkingSpotSubleasedTextView"
+        android:layout_toEndOf="@+id/parkingSpotSubleasedTextView"
+        android:background="#ffb700"
+        android:text="0" />
 
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/switch1"
-        android:layout_alignTop="@+id/textView22"
-        android:layout_alignStart="@+id/editText7"
+        android:id="@+id/parkingSpotSubleasedSwitch"
+        android:layout_alignTop="@+id/parkingSpotSubleasedTextView"
+        android:layout_alignStart="@+id/parkingSpotCostEditText"
         android:checked="true"
         android:clickable="true" />
 
@@ -204,50 +210,57 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText8"
+        android:id="@+id/numberOfRoommatesEditText"
         android:background="#ffffff"
-        android:layout_alignTop="@+id/textView23"
-        android:layout_toEndOf="@+id/textView21"
-        android:layout_alignStart="@+id/switch1" />
+        android:layout_alignTop="@+id/numberOfRoommatesTextView"
+        android:layout_toEndOf="@+id/parkingSpotCostTextView"
+        android:layout_alignStart="@+id/parkingSpotSubleasedSwitch"
+        android:text="0" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText6"
+        android:id="@+id/subletterEditText"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/editText5"
-        android:background="#ffea00" />
+        android:layout_alignStart="@+id/internetEditText"
+        android:background="#ffea00"
+        android:text="0" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/editText9"
-        android:layout_alignTop="@+id/textView24"
-        android:layout_toEndOf="@+id/textView22"
-        android:background="#cccccc" />
+        android:id="@+id/totalCostEditText"
+        android:layout_alignTop="@+id/totalCostTextView"
+        android:layout_toEndOf="@+id/parkingSpotSubleasedTextView"
+        android:background="#cccccc"
+        android:clickable="false"
+        android:editable="false" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/editText10"
-        android:layout_alignTop="@+id/textView25"
-        android:layout_alignStart="@+id/editText9"
-        android:background="#FFCCCCCC" />
+        android:id="@+id/totalCostPerPersonEditText"
+        android:layout_alignTop="@+id/totalCostPerPersonTextView"
+        android:layout_alignStart="@+id/totalCostEditText"
+        android:background="#FFCCCCCC"
+        android:clickable="false"
+        android:editable="false"
+        android:onClick="buttonClick" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calculate"
-        android:id="@+id/button6"
+        android:id="@+id/calculateButton"
         android:background="@null"
         android:textColor="#00a6ff"
-        android:layout_alignBottom="@+id/textView26"
+        android:layout_alignBottom="@+id/rentCalculatorTextView"
         android:layout_alignParentEnd="true"
         android:textSize="12sp" />
 </RelativeLayout>
