@@ -177,16 +177,6 @@
         android:id="@+id/editText5"
         android:background="#ff0000"
         android:layout_above="@+id/textView20"
-        android:layout_alignStart="@+id/editText6" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/editText6"
-        android:background="#f7ff00"
-        android:layout_alignBottom="@+id/textView20"
         android:layout_alignStart="@+id/editText7" />
 
     <EditText
@@ -207,4 +197,45 @@
         android:layout_alignStart="@+id/editText7"
         android:checked="true"
         android:clickable="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText8"
+        android:background="#ffffff"
+        android:layout_alignTop="@+id/textView23"
+        android:layout_toEndOf="@+id/textView21"
+        android:layout_alignStart="@+id/switch1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText6"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/editText5"
+        android:background="#ffea00" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editText9"
+        android:layout_alignTop="@+id/textView24"
+        android:layout_toEndOf="@+id/textView22"
+        android:background="#cccccc" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editText10"
+        android:layout_alignTop="@+id/textView25"
+        android:layout_alignStart="@+id/editText9"
+        android:background="#FFCCCCCC" />
 </RelativeLayout>
