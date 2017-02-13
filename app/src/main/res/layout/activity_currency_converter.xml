@@ -10,4 +10,66 @@
     tools:context="matthewallenlinsoftware.billutil.CurrencyConverterActivity"
     android:background="#55ff00">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Currency Converter"
+        android:id="@+id/textView28"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="US $"
+        android:id="@+id/textView31"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/textView28"
+        android:layout_alignEnd="@+id/textView28"
+        android:layout_marginEnd="57dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Euro"
+        android:id="@+id/textView32"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/textView31"
+        android:layout_alignStart="@+id/textView31" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yen"
+        android:id="@+id/textView33"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/textView32"
+        android:layout_alignStart="@+id/textView32" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pound"
+        android:id="@+id/textView34"
+        android:layout_below="@+id/textView33"
+        android:layout_alignStart="@+id/textView33"
+        android:layout_marginTop="26dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Franc"
+        android:id="@+id/textView35"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/textView34" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CA $"
+        android:id="@+id/textView36"
+        android:layout_below="@+id/textView35"
+        android:layout_alignStart="@+id/textView35"
+        android:layout_marginTop="25dp" />
 </RelativeLayout>
