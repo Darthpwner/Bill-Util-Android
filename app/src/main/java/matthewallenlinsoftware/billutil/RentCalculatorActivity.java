@@ -53,7 +53,23 @@ public class RentCalculatorActivity extends AppCompatActivity {
 
     //Perform calculations
     public void calculateButtonClick(View v) {
-        totalCostEditText.setText("50");
-        totalCostPerPersonEditText.setText("12.5");
+        double monthlyBaseRentAmount = Double.parseDouble(monthlyBaseRentEditText.getText().toString());
+        double electricAmount = Double.parseDouble(electricEditText.getText().toString());
+        double gasAmount = Double.parseDouble(gasEditText.getText().toString());
+        double waterAmount = Double.parseDouble(waterEditText.getText().toString());
+        double internetAmount = Double.parseDouble(internetEditText.getText().toString());
+        double parkingSpotCostAmount = Double.parseDouble(parkingSpotCostEditText.getText().toString());
+        int numberOfRoommatesAmount = Integer.parseInt(numberOfRoommatesEditText.getText().toString());
+        int subletterAmount = Integer.parseInt(subletterEditText.getText().toString());
+
+        double totalCostAmount = monthlyBaseRentAmount + electricAmount + gasAmount + waterAmount + internetAmount - subletterAmount;
+        double totalCostPerPersonAmount = totalCostAmount / (numberOfRoommatesAmount + 1);
+
+        String totalCostAmountAsString = String.valueOf(totalCostAmount);
+
+        String totalCostPerPersonAmountAsString = String.valueOf(totalCostPerPersonAmount);
+
+        totalCostEditText.setText(totalCostAmountAsString);
+        totalCostPerPersonEditText.setText(totalCostPerPersonAmountAsString);
     }
 }
