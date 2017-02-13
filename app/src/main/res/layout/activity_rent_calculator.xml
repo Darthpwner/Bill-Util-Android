@@ -250,8 +250,7 @@
         android:layout_alignStart="@+id/totalCostEditText"
         android:background="#FFCCCCCC"
         android:clickable="false"
-        android:editable="false"
-        android:onClick="buttonClick" />
+        android:editable="false" />
 
     <Button
         android:layout_width="wrap_content"
@@ -262,5 +261,6 @@
         android:textColor="#00a6ff"
         android:layout_alignBottom="@+id/rentCalculatorTextView"
         android:layout_alignParentEnd="true"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        android:onClick="calculateButtonClick" />
 </RelativeLayout>

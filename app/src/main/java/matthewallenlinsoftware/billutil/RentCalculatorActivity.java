@@ -2,6 +2,7 @@ package matthewallenlinsoftware.billutil;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
@@ -51,7 +52,7 @@ public class RentCalculatorActivity extends AppCompatActivity {
     }
 
     //Perform calculations
-    public void buttonClick() {
+    public void calculateButtonClick(View v) {
         totalCostEditText.setText("50");
         totalCostPerPersonEditText.setText("12.5");
     }
