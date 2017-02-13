@@ -63,11 +63,17 @@ public class RentCalculatorActivity extends AppCompatActivity {
         int subletterAmount = Integer.parseInt(subletterEditText.getText().toString());
 
         double totalCostAmount = monthlyBaseRentAmount + electricAmount + gasAmount + waterAmount + internetAmount - subletterAmount;
+
+        if(parkingSpotsSubleasedSwitch.isChecked()) {
+            totalCostAmount -= parkingSpotCostAmount;
+        } else {
+            totalCostAmount += parkingSpotCostAmount;
+        }
+
         double totalCostPerPersonAmount = totalCostAmount / (numberOfRoommatesAmount + 1);
 
-        String totalCostAmountAsString = String.valueOf(totalCostAmount);
-
-        String totalCostPerPersonAmountAsString = String.valueOf(totalCostPerPersonAmount);
+        String totalCostAmountAsString = String.format("%.2f", totalCostAmount);
+        String totalCostPerPersonAmountAsString = String.format("%.2f", totalCostPerPersonAmount);
 
         totalCostEditText.setText(totalCostAmountAsString);
         totalCostPerPersonEditText.setText(totalCostPerPersonAmountAsString);
