@@ -66,6 +66,6 @@ public class TipCalculatorActivity extends AppCompatActivity {
         tipAmountEditText.setText(roundedTipAmountAsString);
         totalEditText.setText(totalAmountAsString);
         tipAmountPerPersonEditText.setText(roundedTipAmountPerPersonAsString);
-        totalPerPersonEditText.setText(totalAmountPerPersonAsString);
+        //totalPerPersonEditText.setText(totalAmountPerPersonAsString);
     }
 }
