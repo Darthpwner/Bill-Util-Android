@@ -130,7 +130,8 @@
         android:layout_toEndOf="@+id/salesTaxCalculatorTextView"
         android:textSize="9sp"
         android:background="@null"
-        android:textColor="#035fff" />
+        android:textColor="#035fff"
+        android:onClick="calculateButtonClick" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -141,7 +142,7 @@
         android:layout_alignTop="@+id/salesTaxTextViw"
         android:layout_alignStart="@+id/numberOfPeopleEditText"
         android:background="#FFCCCCCC"
-        android:text="0" />
+        android:text="7.5" />
 
     <EditText
         android:layout_width="wrap_content"
