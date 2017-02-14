@@ -2,6 +2,7 @@ package matthewallenlinsoftware.billutil;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -83,9 +84,13 @@ public class TipCalculatorActivity extends AppCompatActivity {
     }
 
     public void setButton(View v) {
-        int temp = (int) (Math.random() % 100);
+        int temp = (int) (Math.random() * 100);
+
+        Log.d("temp", Integer.toString(temp));
+
+        // Need to figure out how to create PickerViews
 
         tipPercentageProgressBar.setProgress(temp);
-        tipPercentageValueTextView.setText(tipPercentageProgressBar.getProgress());
+        tipPercentageValueTextView.setText(Integer.toString(tipPercentageProgressBar.getProgress()));
     }
 }
