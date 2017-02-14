@@ -9,7 +9,7 @@ import android.widget.Switch;
 
 public class RentCalculatorActivity extends AppCompatActivity {
 
-    // EditText
+    // Clickable + Editable EditText
     EditText monthlyBaseRentEditText;
     EditText electricEditText;
     EditText gasEditText;
@@ -18,6 +18,8 @@ public class RentCalculatorActivity extends AppCompatActivity {
     EditText parkingSpotCostEditText;
     EditText numberOfRoommatesEditText;
     EditText subletterEditText;
+
+    // EditText
     EditText totalCostEditText;
     EditText totalCostPerPersonEditText;
 
