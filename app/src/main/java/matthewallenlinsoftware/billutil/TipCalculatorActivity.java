@@ -34,7 +34,7 @@ public class TipCalculatorActivity extends AppCompatActivity {
         tipAmountEditText = (EditText) findViewById(R.id.tipAmountEditText);
         totalEditText = (EditText) findViewById(R.id.totalEditText);
         tipAmountPerPersonEditText = (EditText) findViewById(R.id.tipAmountPerPersonEditText);
-        totalPerPersonEditText = (EditText) findViewById(R.id.totalCostPerPersonEditText);
+        totalPerPersonEditText = (EditText) findViewById(R.id.totalPerPersonEditText);
 
         // Initialize Buttons
         calculateButton = (Button) findViewById(R.id.calculateButton);
@@ -48,24 +48,23 @@ public class TipCalculatorActivity extends AppCompatActivity {
 
         // Temp
         double tipPercentage = 0.15;
+        //Temp
 
-        double roundedBillAmount = Math.round(100 * billAmount / 100);
-        double tipAmount = roundedBillAmount * tipPercentage;
-        double roundedTipAmount = Math.round(100 * tipAmount) / 100;
-        double totalAmount = roundedBillAmount + roundedTipAmount;
-        double roundedTipAmountPerPerson = roundedTipAmount / numberOfPeopleAmount;
+        double tipAmount = billAmount * tipPercentage;
+        double tipAmountPerPerson = tipAmount / numberOfPeopleAmount;
+        double totalAmount = billAmount + tipAmount;
         double totalAmountPerPerson = totalAmount / numberOfPeopleAmount;
 
-        String roundedBillAmountAsString = String.format("%.2f", roundedBillAmount);
-        String roundedTipAmountAsString = String.format("%.2f", roundedTipAmount);
+        String billAmountAsString = String.format("%.2f", billAmount);
+        String tipAmountAsString = String.format("%.2f", tipAmount);
         String totalAmountAsString = String.format("%.2f", totalAmount);
-        String roundedTipAmountPerPersonAsString = String.format("%.2f", roundedTipAmountPerPerson);
-        String totalAmountPerPersonAsString = String.format("%.2f", totalAmountPerPerson);
+        String tipAmountPerPersonAsString = String.format("%.2f", tipAmountPerPerson);
+        String totalPerPersonAsString = String.format("%.2f", totalAmountPerPerson);
 
-        billAmountEditText.setText(roundedBillAmountAsString);
-        tipAmountEditText.setText(roundedTipAmountAsString);
+        billAmountEditText.setText(billAmountAsString);
+        tipAmountEditText.setText(tipAmountAsString);
         totalEditText.setText(totalAmountAsString);
-        tipAmountPerPersonEditText.setText(roundedTipAmountPerPersonAsString);
-        //totalPerPersonEditText.setText(totalAmountPerPersonAsString);
+        tipAmountPerPersonEditText.setText(tipAmountPerPersonAsString);
+        totalPerPersonEditText.setText(totalPerPersonAsString);
     }
 }
