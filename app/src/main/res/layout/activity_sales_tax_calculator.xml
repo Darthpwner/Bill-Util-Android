@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sales Tax (%):"
-        android:id="@+id/salesTaxTextViw"
+        android:id="@+id/salesTaxTextView"
         android:textSize="17sp"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true" />
@@ -118,7 +118,7 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/salesTaxPercentageEditText"
-        android:layout_alignTop="@+id/salesTaxTextViw"
+        android:layout_alignTop="@+id/salesTaxTextView"
         android:layout_alignStart="@+id/numberOfPeopleEditText"
         android:background="#FFCCCCCC"
         android:text="7.5" />
@@ -160,6 +160,12 @@
         android:id="@+id/locationSpinner"
         android:spinnerMode="dropdown"
         android:layout_below="@+id/numberOfPeopleEditText"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="false"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignWithParentIfMissing="false" />
 
 </RelativeLayout>
