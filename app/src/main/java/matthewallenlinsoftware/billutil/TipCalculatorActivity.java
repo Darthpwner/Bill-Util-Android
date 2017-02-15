@@ -2,11 +2,11 @@ package matthewallenlinsoftware.billutil;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 public class TipCalculatorActivity extends AppCompatActivity {
@@ -31,6 +31,9 @@ public class TipCalculatorActivity extends AppCompatActivity {
     // ProgressBar
     ProgressBar tipPercentageProgressBar;
 
+    // SeekBar
+    SeekBar tipPercentageSeekBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,8 +55,21 @@ public class TipCalculatorActivity extends AppCompatActivity {
         calculateButton = (Button) findViewById(R.id.calculateButton);
         setButton = (Button) findViewById(R.id.setButton);
 
-        // Initialize ProgressBar
-        tipPercentageProgressBar = (ProgressBar) findViewById(R.id.tipPercentageProgressBar);
+        // Initialize SeekBar
+        tipPercentageSeekBar = (SeekBar) findViewById(R.id.tipPercentageSeekBar);
+
+        tipPercentageSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                tipPercentageValueTextView.setText(Integer.toString(tipPercentageSeekBar.getProgress()));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
     }
 
     //Perform calculations
@@ -61,9 +77,7 @@ public class TipCalculatorActivity extends AppCompatActivity {
         double billAmount = Double.parseDouble(billAmountEditText.getText().toString());
         double numberOfPeopleAmount = Double.parseDouble(numberOfPeopleEditText.getText().toString());
 
-        // Temp
-        double tipPercentage = tipPercentageProgressBar.getProgress() * .01;
-        //Temp
+        double tipPercentage = tipPercentageSeekBar.getProgress() * .01;
 
         double tipAmount = billAmount * tipPercentage;
         double tipAmountPerPerson = tipAmount / numberOfPeopleAmount;
@@ -81,16 +95,5 @@ public class TipCalculatorActivity extends AppCompatActivity {
         totalEditText.setText(totalAmountAsString);
         tipAmountPerPersonEditText.setText(tipAmountPerPersonAsString);
         totalPerPersonEditText.setText(totalPerPersonAsString);
-    }
-
-    public void setButton(View v) {
-        int temp = (int) (Math.random() * 100);
-
-        Log.d("temp", Integer.toString(temp));
-
-        // Need to figure out how to create PickerViews
-
-        tipPercentageProgressBar.setProgress(temp);
-        tipPercentageValueTextView.setText(Integer.toString(tipPercentageProgressBar.getProgress()));
     }
 }
