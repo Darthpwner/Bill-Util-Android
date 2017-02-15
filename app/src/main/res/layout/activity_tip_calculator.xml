@@ -194,7 +194,7 @@
         android:layout_toStartOf="@+id/calculateButton"
         android:background="#FFCCCCCC"
         android:layout_alignEnd="@+id/tipAmountEditText"
-        android:secondaryProgressTint="#003cff"
-        android:thumbTint="#003cff" />
+        android:thumbTint="#003cff"
+        android:progressTint="#003cff" />
 
 </RelativeLayout>
