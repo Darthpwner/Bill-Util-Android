@@ -26,7 +26,7 @@ public class CurrencyConverterActivity extends AppCompatActivity implements Adap
     Button convertButton;
 
     // Spinner
-    Spinner spinner;
+    Spinner currencySpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class CurrencyConverterActivity extends AppCompatActivity implements Adap
         convertButton = (Button) findViewById(R.id.convertButton);
 
         // Spinner setup
-        spinner = (Spinner) findViewById(R.id.spinner);
+        currencySpinner = (Spinner) findViewById(R.id.currencySpinner);
 
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -55,7 +55,7 @@ public class CurrencyConverterActivity extends AppCompatActivity implements Adap
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        spinner.setAdapter(adapter);
+        currencySpinner.setAdapter(adapter);
     }
 
     @Override

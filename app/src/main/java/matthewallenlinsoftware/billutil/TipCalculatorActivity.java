@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -24,12 +23,8 @@ public class TipCalculatorActivity extends AppCompatActivity {
     EditText tipAmountPerPersonEditText;
     EditText totalPerPersonEditText;
 
-    // Buttons
+    // Button
     Button calculateButton;
-    Button setButton;
-
-    // ProgressBar
-    ProgressBar tipPercentageProgressBar;
 
     // SeekBar
     SeekBar tipPercentageSeekBar;
@@ -51,9 +46,8 @@ public class TipCalculatorActivity extends AppCompatActivity {
         tipAmountPerPersonEditText = (EditText) findViewById(R.id.tipAmountPerPersonEditText);
         totalPerPersonEditText = (EditText) findViewById(R.id.totalPerPersonEditText);
 
-        // Initialize Buttons
+        // Initialize Button
         calculateButton = (Button) findViewById(R.id.calculateButton);
-        setButton = (Button) findViewById(R.id.setButton);
 
         // Initialize SeekBar
         tipPercentageSeekBar = (SeekBar) findViewById(R.id.tipPercentageSeekBar);
