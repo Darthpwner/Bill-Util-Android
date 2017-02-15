@@ -160,7 +160,7 @@
         android:text="Convert"
         android:id="@+id/convertButton"
         android:background="@null"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/currencyConverterTextView"
         android:textColor="#035fff"
