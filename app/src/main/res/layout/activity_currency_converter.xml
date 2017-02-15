@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Currency Converter"
-        android:id="@+id/textView28"
+        android:id="@+id/currencyConverterTextView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textSize="24sp" />
@@ -23,53 +23,126 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="US $"
-        android:id="@+id/textView31"
+        android:id="@+id/usDollarTextView"
         android:layout_marginTop="25dp"
-        android:layout_below="@+id/textView28"
-        android:layout_alignEnd="@+id/textView28"
+        android:layout_below="@+id/currencyConverterTextView"
+        android:layout_alignEnd="@+id/currencyConverterTextView"
         android:layout_marginEnd="57dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Euro"
-        android:id="@+id/textView32"
+        android:id="@+id/euroTextView"
         android:layout_marginTop="28dp"
-        android:layout_below="@+id/textView31"
-        android:layout_alignStart="@+id/textView31" />
+        android:layout_below="@+id/usDollarTextView"
+        android:layout_alignStart="@+id/usDollarTextView" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Yen"
-        android:id="@+id/textView33"
+        android:id="@+id/yenTextView"
         android:layout_marginTop="29dp"
-        android:layout_below="@+id/textView32"
-        android:layout_alignStart="@+id/textView32" />
+        android:layout_below="@+id/euroTextView"
+        android:layout_alignStart="@+id/euroTextView" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pound"
-        android:id="@+id/textView34"
-        android:layout_below="@+id/textView33"
-        android:layout_alignStart="@+id/textView33"
+        android:id="@+id/poundTextView"
+        android:layout_below="@+id/yenTextView"
+        android:layout_alignStart="@+id/yenTextView"
         android:layout_marginTop="26dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Franc"
-        android:id="@+id/textView35"
+        android:id="@+id/francTextView"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/textView34" />
+        android:layout_alignStart="@+id/poundTextView" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CA $"
-        android:id="@+id/textView36"
-        android:layout_below="@+id/textView35"
-        android:layout_alignStart="@+id/textView35"
+        android:id="@+id/canadianDollarTextView"
+        android:layout_below="@+id/francTextView"
+        android:layout_alignStart="@+id/francTextView"
         android:layout_marginTop="25dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/usDollarEditText"
+        android:background="#FFCCCCCC"
+        android:layout_alignTop="@+id/usDollarTextView"
+        android:layout_alignStart="@+id/euroEditText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/euroEditText"
+        android:background="#FFCCCCCC"
+        android:layout_above="@+id/yenTextView"
+        android:layout_alignStart="@+id/yenEditText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/yenEditText"
+        android:background="#FFCCCCCC"
+        android:layout_alignTop="@+id/yenTextView"
+        android:layout_alignStart="@+id/poundEditText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/poundEditText"
+        android:background="#FFCCCCCC"
+        android:layout_alignTop="@+id/poundTextView"
+        android:layout_toEndOf="@+id/poundTextView"
+        android:layout_marginStart="22dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/francEditText"
+        android:layout_alignTop="@+id/francTextView"
+        android:layout_alignStart="@+id/poundEditText"
+        android:background="#FFCCCCCC" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/canadianDollarEditText"
+        android:layout_alignTop="@+id/canadianDollarTextView"
+        android:layout_alignStart="@+id/francEditText"
+        android:background="#FFCCCCCC" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/currentCurrencyEditText"
+        android:background="#ffffff"
+        android:layout_alignTop="@+id/canadianDollarTextView"
+        android:layout_toStartOf="@+id/canadianDollarTextView"
+        android:layout_marginEnd="26dp" />
+
 </RelativeLayout>

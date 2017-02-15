@@ -203,7 +203,9 @@
         android:layout_alignTop="@+id/parkingSpotSubleasedTextView"
         android:layout_alignStart="@+id/parkingSpotCostEditText"
         android:checked="true"
-        android:clickable="true" />
+        android:clickable="true"
+        android:thumbTint="#ffffff"
+        android:trackTint="#2bff00" />
 
     <EditText
         android:layout_width="wrap_content"
