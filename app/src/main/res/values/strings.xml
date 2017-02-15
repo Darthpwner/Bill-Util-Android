@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Bill Util</string>
     <string name="action_settings">Settings</string>
+
+    <string-array name="currencyConverterSpinner">
+        <item>US $</item>
+        <item>Euro</item>
+        <item>Yen</item>
+        <item>Pound</item>
+        <item>Franc</item>
+        <item>CA $</item>
+    </string-array>
 </resources>

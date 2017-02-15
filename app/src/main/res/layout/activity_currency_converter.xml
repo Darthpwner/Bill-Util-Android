@@ -145,4 +145,26 @@
         android:layout_toStartOf="@+id/canadianDollarTextView"
         android:layout_marginEnd="26dp" />
 
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_alignBottom="@+id/yenEditText"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/currentCurrencyEditText"
+        android:spinnerMode="dropdown" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:id="@+id/convertButton"
+        android:background="@null"
+        android:textSize="12sp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/currencyConverterTextView"
+        android:textColor="#035fff"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp" />
+
 </RelativeLayout>
