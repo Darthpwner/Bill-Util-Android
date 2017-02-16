@@ -74,8 +74,8 @@ public class RentCalculatorActivity extends AppCompatActivity {
 
         double totalCostPerPersonAmount = totalCostAmount / (numberOfRoommatesAmount + 1);
 
-        String totalCostAmountAsString = String.format("%.2f", totalCostAmount);
-        String totalCostPerPersonAmountAsString = String.format("%.2f", totalCostPerPersonAmount);
+        String totalCostAmountAsString = String.format("$" + "%.2f", totalCostAmount);
+        String totalCostPerPersonAmountAsString = String.format("$" + "%.2f", totalCostPerPersonAmount);
 
         totalCostEditText.setText(totalCostAmountAsString);
         totalCostPerPersonEditText.setText(totalCostPerPersonAmountAsString);

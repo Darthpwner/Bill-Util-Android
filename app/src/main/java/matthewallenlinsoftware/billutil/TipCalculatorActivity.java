@@ -79,10 +79,10 @@ public class TipCalculatorActivity extends AppCompatActivity {
         double totalAmountPerPerson = totalAmount / numberOfPeopleAmount;
 
         String billAmountAsString = String.format("%.2f", billAmount);
-        String tipAmountAsString = String.format("%.2f", tipAmount);
-        String totalAmountAsString = String.format("%.2f", totalAmount);
-        String tipAmountPerPersonAsString = String.format("%.2f", tipAmountPerPerson);
-        String totalPerPersonAsString = String.format("%.2f", totalAmountPerPerson);
+        String tipAmountAsString = String.format("$" + "%.2f", tipAmount);
+        String totalAmountAsString = String.format("$" + "%.2f", totalAmount);
+        String tipAmountPerPersonAsString = String.format("$" + "%.2f", tipAmountPerPerson);
+        String totalPerPersonAsString = String.format("$" + "%.2f", totalAmountPerPerson);
 
         billAmountEditText.setText(billAmountAsString);
         tipAmountEditText.setText(tipAmountAsString);

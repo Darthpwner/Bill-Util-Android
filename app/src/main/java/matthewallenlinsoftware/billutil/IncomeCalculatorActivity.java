@@ -159,11 +159,11 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
         double leftTenYearsAmount = 10 * leftAnnualSalary + leftBonusesAmount;
         double leftTwentyYearsAmount = 20 * leftAnnualSalary + leftBonusesAmount;
 
-        String leftOneYearAmountAsString = String.format("%.2f", leftOneYearAmount);
-        String leftTwoYearsAmountAsString = String.format("%.2f", leftTwoYearsAmount);
-        String leftFiveYearsAmountAsString = String.format("%.2f", leftFiveYearsAmount);
-        String leftTenYearsAmountAsString = String.format("%.2f", leftTenYearsAmount);
-        String leftTwentyYearsAmountAsString = String.format("%.2f", leftTwentyYearsAmount);
+        String leftOneYearAmountAsString = String.format("$" + "%.2f", leftOneYearAmount);
+        String leftTwoYearsAmountAsString = String.format("$" + "%.2f", leftTwoYearsAmount);
+        String leftFiveYearsAmountAsString = String.format("$" + "%.2f", leftFiveYearsAmount);
+        String leftTenYearsAmountAsString = String.format("$" + "%.2f", leftTenYearsAmount);
+        String leftTwentyYearsAmountAsString = String.format("$" + "%.2f", leftTwentyYearsAmount);
 
         leftOneYearEditText.setText(leftOneYearAmountAsString);
         leftTwoYearsEditText.setText(leftTwoYearsAmountAsString);
@@ -197,11 +197,11 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
         double rightTenYearsAmount = 10 * rightAnnualSalary + rightBonusesAmount;
         double rightTwentyYearsAmount = 20 * rightAnnualSalary + rightBonusesAmount;
 
-        String rightOneYearAmountAsString = String.format("%.2f", rightOneYearAmount);
-        String rightTwoYearsAmountAsString = String.format("%.2f", rightTwoYearsAmount);
-        String rightFiveYearsAmountAsString = String.format("%.2f", rightFiveYearsAmount);
-        String rightTenYearsAmountAsString = String.format("%.2f", rightTenYearsAmount);
-        String rightTwentyYearsAmountAsString = String.format("%.2f", rightTwentyYearsAmount);
+        String rightOneYearAmountAsString = String.format("$" + "%.2f", rightOneYearAmount);
+        String rightTwoYearsAmountAsString = String.format("$" + "%.2f", rightTwoYearsAmount);
+        String rightFiveYearsAmountAsString = String.format("$" + "%.2f", rightFiveYearsAmount);
+        String rightTenYearsAmountAsString = String.format("$" + "%.2f", rightTenYearsAmount);
+        String rightTwentyYearsAmountAsString = String.format("$" + "%.2f", rightTwentyYearsAmount);
 
         rightOneYearEditText.setText(rightOneYearAmountAsString);
         rightTwoYearsEditText.setText(rightTwoYearsAmountAsString);
