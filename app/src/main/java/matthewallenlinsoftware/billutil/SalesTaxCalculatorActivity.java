@@ -19,7 +19,6 @@ public class SalesTaxCalculatorActivity extends AppCompatActivity implements Ada
     EditText numberOfPeopleEditText;
 
     // EditTexts
-    EditText locationEditText;
     EditText salesTaxPercentageEditText;
     EditText taxCostEditText;
     EditText totalEditText;
@@ -142,11 +141,14 @@ public class SalesTaxCalculatorActivity extends AppCompatActivity implements Ada
         double totalAmount = billAmount + taxCostAmount;
         double totalAmountPerPerson = totalAmount / numberOfPeopleAmount;
 
+        double salesTaxAmountDisplay = salesTaxAmount * 100;    //For display purposes
+        String salesTaxPercentageAsString = String.format("%.2f", salesTaxAmountDisplay);
         String billAmountAsString = String.format("%.2f", billAmount);
         String taxCostAmountAsString = String.format("%.2f", taxCostAmount);
         String totalAmountAsString = String.format("%.2f", totalAmount);
         String totalAmountPerPersonAsString = String.format("%.2f", totalAmountPerPerson);
 
+        salesTaxPercentageEditText.setText(salesTaxPercentageAsString);
         billAmountEditText.setText(billAmountAsString);
         taxCostEditText.setText(taxCostAmountAsString);
         totalEditText.setText(totalAmountAsString);
