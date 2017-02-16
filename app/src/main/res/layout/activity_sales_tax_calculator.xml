@@ -122,7 +122,9 @@
         android:text="4.0"
         android:layout_alignBottom="@+id/salesTaxTextView"
         android:layout_alignStart="@+id/numberOfPeopleEditText"
-        android:layout_marginStart="47dp" />
+        android:layout_marginStart="47dp"
+        android:enabled="true"
+        android:focusable="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -133,7 +135,9 @@
         android:layout_alignTop="@+id/taxCostTextView"
         android:layout_alignStart="@+id/salesTaxPercentageEditText"
         android:autoText="false"
-        android:background="#FFCCCCCC" />
+        android:background="#FFCCCCCC"
+        android:enabled="true"
+        android:focusable="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -143,7 +147,9 @@
         android:id="@+id/totalEditText"
         android:layout_alignTop="@+id/totalTextView"
         android:layout_alignStart="@+id/taxCostEditText"
-        android:background="#FFCCCCCC" />
+        android:background="#FFCCCCCC"
+        android:enabled="true"
+        android:focusable="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -153,7 +159,9 @@
         android:id="@+id/totalPerPersonEditText"
         android:layout_alignTop="@+id/totalPerPersonTextView"
         android:layout_alignStart="@+id/totalEditText"
-        android:background="#FFCCCCCC" />
+        android:background="#FFCCCCCC"
+        android:enabled="true"
+        android:focusable="true" />
 
     <Spinner
         android:layout_width="wrap_content"

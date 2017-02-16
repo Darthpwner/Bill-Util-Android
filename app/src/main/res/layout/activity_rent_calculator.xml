@@ -240,7 +240,9 @@
         android:layout_toEndOf="@+id/parkingSpotSubleasedTextView"
         android:background="#cccccc"
         android:clickable="false"
-        android:editable="false" />
+        android:editable="false"
+        android:enabled="true"
+        android:focusable="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -252,7 +254,9 @@
         android:layout_alignStart="@+id/totalCostEditText"
         android:background="#FFCCCCCC"
         android:clickable="false"
-        android:editable="false" />
+        android:editable="false"
+        android:enabled="true"
+        android:focusable="true" />
 
     <Button
         android:layout_width="wrap_content"

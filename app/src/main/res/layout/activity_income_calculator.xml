@@ -131,7 +131,9 @@
             android:inputType="numberDecimal"
             android:ems="10"
             android:id="@+id/leftOneYearEditText"
-            android:background="#cccccc" />
+            android:background="#cccccc"
+            android:enabled="true"
+            android:focusable="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -145,7 +147,9 @@
             android:inputType="numberDecimal"
             android:ems="10"
             android:id="@+id/leftTwoYearsEditText"
-            android:background="#cccccc" />
+            android:background="#cccccc"
+            android:enabled="true"
+            android:focusable="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -160,7 +164,9 @@
             android:ems="10"
             android:id="@+id/leftFiveYearsEditText"
             android:layout_gravity="center_horizontal"
-            android:background="#cccccc" />
+            android:background="#cccccc"
+            android:enabled="true"
+            android:focusable="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -175,7 +181,9 @@
             android:ems="10"
             android:id="@+id/leftTenYearsEditText"
             android:layout_gravity="center_horizontal"
-            android:background="#cccccc" />
+            android:background="#cccccc"
+            android:enabled="true"
+            android:focusable="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -189,7 +197,9 @@
             android:inputType="numberDecimal"
             android:ems="10"
             android:id="@+id/leftTwentyYearsEditText"
-            android:background="#cccccc" />
+            android:background="#cccccc"
+            android:enabled="true"
+            android:focusable="true" />
 
     </LinearLayout>
 
@@ -291,7 +301,9 @@
             android:ems="10"
             android:id="@+id/rightOneYearEditText"
             android:layout_gravity="center_horizontal"
-            android:background="#cccccc" />
+            android:background="#cccccc"
+            android:enabled="true"
+            android:focusable="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -306,7 +318,9 @@
             android:ems="10"
             android:id="@+id/rightTwoYearsEditText"
             android:layout_gravity="center_horizontal"
-            android:background="#cccccc" />
+            android:background="#cccccc"
+            android:enabled="true"
+            android:focusable="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -321,7 +335,9 @@
             android:ems="10"
             android:id="@+id/rightFiveYearsEditText"
             android:layout_gravity="center_horizontal"
-            android:background="#cccccc" />
+            android:background="#cccccc"
+            android:enabled="true"
+            android:focusable="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -336,7 +352,9 @@
             android:ems="10"
             android:id="@+id/rightTenYearsEditText"
             android:layout_gravity="center_horizontal"
-            android:background="#cccccc" />
+            android:background="#cccccc"
+            android:enabled="true"
+            android:focusable="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -351,7 +369,9 @@
             android:ems="10"
             android:id="@+id/rightTwentyYearsEditText"
             android:layout_gravity="center_horizontal"
-            android:background="#cccccc" />
+            android:background="#cccccc"
+            android:enabled="true"
+            android:focusable="true" />
 
     </LinearLayout>
 

@@ -121,7 +121,9 @@
         android:layout_toEndOf="@+id/tipAmountPerPersonTextView"
         android:background="#FFCCCCCC"
         android:clickable="true"
-        android:editable="true" />
+        android:editable="true"
+        android:enabled="true"
+        android:focusable="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -133,7 +135,9 @@
         android:layout_alignBottom="@+id/totalTextView"
         android:layout_alignStart="@+id/tipAmountEditText"
         android:clickable="true"
-        android:editable="true" />
+        android:editable="true"
+        android:enabled="true"
+        android:focusable="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -145,7 +149,9 @@
         android:layout_alignBottom="@+id/tipAmountPerPersonTextView"
         android:layout_alignStart="@+id/totalEditText"
         android:clickable="true"
-        android:editable="true" />
+        android:editable="true"
+        android:enabled="true"
+        android:focusable="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -157,7 +163,9 @@
         android:layout_toEndOf="@+id/tipAmountPerPersonTextView"
         android:background="#FFCCCCCC"
         android:clickable="true"
-        android:editable="true" />
+        android:editable="true"
+        android:enabled="true"
+        android:focusable="true" />
 
     <Button
         android:layout_width="wrap_content"
