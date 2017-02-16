@@ -46,6 +46,9 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
     // Spinner
     Spinner rightTimeIntervalSpinner;
 
+    // Right Object that gets spinner value
+    Object rightSpinnerValue;
+
     // EditTexts
     EditText rightOneYearEditText;
     EditText rightTwoYearsEditText;
@@ -90,20 +93,33 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
         leftTimeIntervalSpinner.setOnItemSelectedListener(this);
 
         // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+        ArrayAdapter<CharSequence> leftAdapter = ArrayAdapter.createFromResource(this,
                 R.array.leftTimeIntervalSpinner, android.R.layout.simple_spinner_item);
         // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        leftAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        leftTimeIntervalSpinner.setAdapter(adapter);
+        leftTimeIntervalSpinner.setAdapter(leftAdapter);
 
         // Right spinner setup
+        rightSpinnerValue = new Object();
+
+        leftTimeIntervalSpinner = (Spinner) findViewById(R.id.leftSpinner);
+        leftTimeIntervalSpinner.setOnItemSelectedListener(this);
+
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> rightAdapter = ArrayAdapter.createFromResource(this,
+                R.array.leftTimeIntervalSpinner, android.R.layout.simple_spinner_item);
+        // Specify the layout to use when the list of choices appears
+        rightAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        leftTimeIntervalSpinner.setAdapter(rightAdapter);
 
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         leftSpinnerValue = parent.getItemAtPosition(position);
+
     }
 
     @Override
