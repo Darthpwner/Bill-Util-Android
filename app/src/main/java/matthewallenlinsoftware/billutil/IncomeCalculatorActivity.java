@@ -5,10 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
 public class IncomeCalculatorActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    // Button
+    Button calculateButton;
+
     // Left side
 
     // Clickable + Editable EditTexts
@@ -48,6 +52,9 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_income_calculator);
 
+        //  Initialize Button
+        calculateButton = (Button) findViewById(R.id.calculateButton);
+
         // Initialize left EditTexts
         leftIncomeEditText = (EditText) findViewById(R.id.leftIncomeEditText);
         leftBonusesEditText = (EditText) findViewById(R.id.leftBonusesEditText);
@@ -69,7 +76,7 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
         rightFiveYearsEditText = (EditText) findViewById(R.id.rightFiveYearsEditText);
         rightTenYearsEditText = (EditText) findViewById(R.id.rightTenYearsEditText);
         rightTwentyYearsEditText = (EditText) findViewById(R.id.rightTwentyYearsEditText);
-        
+
         // Left spinner setup
         leftTimeIntervalSpinner = (Spinner) findViewById(R.id.leftSpinner);
         leftTimeIntervalSpinner.setOnItemSelectedListener(this);
@@ -94,5 +101,9 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    public void calculateButtonClick(View v) {
+        
     }
 }
