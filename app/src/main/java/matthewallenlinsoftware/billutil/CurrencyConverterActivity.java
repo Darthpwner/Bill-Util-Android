@@ -2,7 +2,6 @@ package matthewallenlinsoftware.billutil;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -76,69 +75,88 @@ public class CurrencyConverterActivity extends AppCompatActivity implements Adap
 
     // Perform conversions
     public void convertButtonClick(View v) {
+        double usDollarAmount = 0;
+        double euroAmount = 0;
+        double yenAmount = 0;
+        double poundAmount = 0;
+        double francAmount = 0;
+        double canadianDollarAmount = 0;
 
-        Log.d("FUCK", "BITCH");
+        double queryAmount = Double.parseDouble(currentCurrencyEditText.getText().toString());
+
         System.out.println(spinnerValue.toString());
-
-        String temp = "";
-        switch (temp) {
+        String currencyValue = spinnerValue.toString();
+        switch (currencyValue) {
             case "US $":
+                usDollarAmount = queryAmount;
+                euroAmount = queryAmount * 0.93;
+                yenAmount = queryAmount * 114.62;
+                poundAmount = queryAmount * 0.81;
+                francAmount = queryAmount;
+                canadianDollarAmount = queryAmount * 1.33;
+                break;
+            case "Euro":
+                usDollarAmount = queryAmount * 1.07;
+                euroAmount = queryAmount;
+                yenAmount = queryAmount * 122.67;
+                poundAmount = queryAmount * 0.86;
+                francAmount = queryAmount * 1.07;
+                canadianDollarAmount = queryAmount * 1.43;
+                break;
+            case "Yen":
+                usDollarAmount = queryAmount * 0.0087;
+                euroAmount = queryAmount * 0.0082;
+                yenAmount = queryAmount;
+                poundAmount = queryAmount * 0.007;
+                francAmount = queryAmount * 0.0087;
+                canadianDollarAmount = queryAmount * 0.012;
+                break;
+            case "Pound":
+                usDollarAmount = queryAmount * 1.24;
+                euroAmount = queryAmount * 1.16;
+                yenAmount = queryAmount * 141.91;
+                poundAmount = queryAmount;
+                francAmount = queryAmount * 1.24;
+                canadianDollarAmount = queryAmount * 1.65;
+                break;
+            case "Franc":
+                usDollarAmount = queryAmount;
+                euroAmount = queryAmount * 0.93;
+                yenAmount = queryAmount * 114.42;
+                poundAmount = queryAmount * 0.81;
+                francAmount = queryAmount;
+                canadianDollarAmount = queryAmount * 1.33;
+                break;
+            case "CA $":
+                usDollarAmount = queryAmount * 0.75;
+                euroAmount = queryAmount * 0.7;
+                yenAmount = queryAmount * 86.06;
+                poundAmount = queryAmount * 0.61;
+                francAmount = queryAmount * 0.75;
+                canadianDollarAmount = queryAmount;
+                break;
+            default:
+                usDollarAmount = 0;
+                euroAmount = 0;
+                yenAmount = 0;
+                poundAmount = 0;
+                francAmount = 0;
+                canadianDollarAmount = 0;
                 break;
         }
 
-        //
-//        switch pickerValue {
-//            case "US $":
-//                usDollarAmount = queryAmount
-//                euroAmount = queryAmount * 0.93
-//                yenAmount = queryAmount * 114.62
-//                poundAmount = queryAmount * 0.81
-//                francAmount = queryAmount
-//                canadianDollarAmount = queryAmount * 1.33
-//            case "Euro":
-//                usDollarAmount = queryAmount * 1.07
-//                euroAmount = queryAmount
-//                yenAmount = queryAmount * 122.67
-//                poundAmount = queryAmount * 0.86
-//                francAmount = queryAmount * 1.07
-//                canadianDollarAmount = queryAmount * 1.43
-//            case "Yen":
-//                usDollarAmount = queryAmount * 0.0087
-//                euroAmount = queryAmount * 0.0082
-//                yenAmount = queryAmount
-//                poundAmount = queryAmount * 0.007
-//                francAmount = queryAmount * 0.0087
-//                canadianDollarAmount = queryAmount * 0.012
-//            case "Pound":
-//                usDollarAmount = queryAmount * 1.24
-//                euroAmount = queryAmount * 1.16
-//                yenAmount = queryAmount * 141.91
-//                poundAmount = queryAmount * 1.00
-//                francAmount = queryAmount * 1.24
-//                canadianDollarAmount = queryAmount * 1.65
-//            case "Franc":
-//                usDollarAmount = queryAmount
-//                euroAmount = queryAmount * 0.93
-//                yenAmount = queryAmount * 114.42
-//                poundAmount = queryAmount * 0.81
-//                francAmount = queryAmount
-//                canadianDollarAmount = queryAmount * 1.33
-//            case "CA $":
-//                usDollarAmount = queryAmount * 0.75
-//                euroAmount = queryAmount * 0.7
-//                yenAmount = queryAmount * 86.06
-//                poundAmount = queryAmount * 0.61
-//                francAmount = queryAmount * 0.75
-//                canadianDollarAmount = queryAmount
-//            default:
-//                usDollarAmount = 0
-//                euroAmount = 0
-//                yenAmount = 0
-//                poundAmount = 0
-//                francAmount = 0
-//                canadianDollarAmount = 0
-//        }
+        String usDollarAmountAsString = String.format("%.2f", usDollarAmount);
+        String euroAmountAsString = String.format("%.2f", euroAmount);
+        String yenAmountAsString = String.format("%.2f", yenAmount);
+        String poundAmountAsString = String.format("%.2f", poundAmount);
+        String francAmountAsString = String.format("%.2f", francAmount);
+        String canadianDollarAmountAsString = String.format("%.2f", canadianDollarAmount);
 
-
+        usDollarEditText.setText(usDollarAmountAsString);
+        euroEditText.setText(euroAmountAsString);
+        yenEditText.setText(yenAmountAsString);
+        poundEditText.setText(poundAmountAsString);
+        francEditText.setText(francAmountAsString);
+        canadianDollarEditText.setText(canadianDollarAmountAsString);
     }
 }
