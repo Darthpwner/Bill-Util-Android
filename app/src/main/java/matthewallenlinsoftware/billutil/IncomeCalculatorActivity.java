@@ -26,6 +26,9 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
     // Spinner
     Spinner leftTimeIntervalSpinner;
 
+    // Left Object that gets spinner value
+    Object leftSpinnerValue;
+
     // EditTexts
     EditText leftOneYearEditText;
     EditText leftTwoYearsEditText;
@@ -81,6 +84,8 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
         rightTwentyYearsEditText = (EditText) findViewById(R.id.rightTwentyYearsEditText);
 
         // Left spinner setup
+        leftSpinnerValue = new Object();
+
         leftTimeIntervalSpinner = (Spinner) findViewById(R.id.leftSpinner);
         leftTimeIntervalSpinner.setOnItemSelectedListener(this);
 
@@ -98,7 +103,7 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+        leftSpinnerValue = parent.getItemAtPosition(position);
     }
 
     @Override
@@ -111,6 +116,40 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
         double leftBonusesAmount = Double.parseDouble(leftBonusesEditText.getText().toString());
         double leftRSUsAmount = Double.parseDouble(leftRSUsEditText.getText().toString());
 
-        
+        double leftAnnualSalary = 0;
+
+        System.out.println("leftSpinnerValue: " + leftSpinnerValue);
+
+        if(leftSpinnerValue.equals("Hourly")) {
+            leftAnnualSalary = leftIncomeAmount * HOURS_PER_YEAR + leftRSUsAmount;
+            System.out.println("HOURS: " + HOURS_PER_YEAR);
+        } else if(leftSpinnerValue.equals("Monthly")) {
+            leftAnnualSalary = leftIncomeAmount * MONTHS_PER_YEAR + leftRSUsAmount;
+        } else {
+            leftAnnualSalary = leftIncomeAmount * 1 + leftRSUsAmount;
+        }
+
+        System.out.println("leftAnnualSalary: " + leftAnnualSalary);
+
+        double leftOneYearAmount = leftAnnualSalary + leftBonusesAmount;
+        double leftTwoYearsAmount = 2 * leftAnnualSalary + leftBonusesAmount;
+        double leftFiveYearsAmount = 5 * leftAnnualSalary + leftBonusesAmount;
+        double leftTenYearsAmount = 10 * leftAnnualSalary + leftBonusesAmount;
+        double leftTwentyYearsAmount = 20 * leftAnnualSalary + leftBonusesAmount;
+
+        String leftOneYearAmountAsString = String.format("%.2f", leftOneYearAmount);
+        String leftTwoYearsAmountAsString = String.format("%.2f", leftTwoYearsAmount);
+        String leftFiveYearsAmountAsString = String.format("%.2f", leftFiveYearsAmount);
+        String leftTenYearsAmountAsString = String.format("%.2f", leftTenYearsAmount);
+        String leftTwentyYearsAmountAsString = String.format("%.2f", leftTwentyYearsAmount);
+
+        leftOneYearEditText.setText(leftOneYearAmountAsString);
+        leftTwoYearsEditText.setText(leftTwoYearsAmountAsString);
+        leftFiveYearsEditText.setText(leftFiveYearsAmountAsString);
+        leftTenYearsEditText.setText(leftTenYearsAmountAsString);
+        leftTwentyYearsEditText.setText(leftTwentyYearsAmountAsString);
+
+
+
     }
 }
