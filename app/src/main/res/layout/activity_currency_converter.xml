@@ -81,7 +81,8 @@
         android:id="@+id/usDollarEditText"
         android:background="#FFCCCCCC"
         android:layout_alignTop="@+id/usDollarTextView"
-        android:layout_alignStart="@+id/euroEditText" />
+        android:layout_alignStart="@+id/euroEditText"
+        android:clickable="false" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -143,7 +144,8 @@
         android:background="#ffffff"
         android:layout_alignTop="@+id/canadianDollarTextView"
         android:layout_toStartOf="@+id/canadianDollarTextView"
-        android:layout_marginEnd="26dp" />
+        android:layout_marginEnd="26dp"
+        android:text="0" />
 
     <Spinner
         android:layout_width="wrap_content"
