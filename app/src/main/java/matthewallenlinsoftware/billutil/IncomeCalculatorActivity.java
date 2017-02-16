@@ -172,7 +172,41 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
         leftTwentyYearsEditText.setText(leftTwentyYearsAmountAsString);
 
         // Right side
+        double rightIncomeAmount = Double.parseDouble(rightIncomeEditText.getText().toString());
+        double rightBonusesAmount = Double.parseDouble(rightBonusesEditText.getText().toString());
+        double rightRSUsAmount = Double.parseDouble(rightRSUsEditText.getText().toString());
 
+        double rightAnnualSalary = 0;
 
+        System.out.println("rightSpinnerValue: " + rightSpinnerValue);
+
+        if(rightSpinnerValue.equals("Hourly")) {
+            rightAnnualSalary = rightIncomeAmount * HOURS_PER_YEAR + rightRSUsAmount;
+            System.out.println("HOURS: " + HOURS_PER_YEAR);
+        } else if(rightSpinnerValue.equals("Monthly")) {
+            rightAnnualSalary = rightIncomeAmount * MONTHS_PER_YEAR + rightRSUsAmount;
+        } else {
+            rightAnnualSalary = rightIncomeAmount * 1 + rightRSUsAmount;
+        }
+
+        System.out.println("rightAnnualSalary: " + rightAnnualSalary);
+
+        double rightOneYearAmount = rightAnnualSalary + rightBonusesAmount;
+        double rightTwoYearsAmount = 2 * rightAnnualSalary + rightBonusesAmount;
+        double rightFiveYearsAmount = 5 * rightAnnualSalary + rightBonusesAmount;
+        double rightTenYearsAmount = 10 * rightAnnualSalary + rightBonusesAmount;
+        double rightTwentyYearsAmount = 20 * rightAnnualSalary + rightBonusesAmount;
+
+        String rightOneYearAmountAsString = String.format("%.2f", rightOneYearAmount);
+        String rightTwoYearsAmountAsString = String.format("%.2f", rightTwoYearsAmount);
+        String rightFiveYearsAmountAsString = String.format("%.2f", rightFiveYearsAmount);
+        String rightTenYearsAmountAsString = String.format("%.2f", rightTenYearsAmount);
+        String rightTwentyYearsAmountAsString = String.format("%.2f", rightTwentyYearsAmount);
+
+        rightOneYearEditText.setText(rightOneYearAmountAsString);
+        rightTwoYearsEditText.setText(rightTwoYearsAmountAsString);
+        rightFiveYearsEditText.setText(rightFiveYearsAmountAsString);
+        rightTenYearsEditText.setText(rightTenYearsAmountAsString);
+        rightTwentyYearsEditText.setText(rightTwentyYearsAmountAsString);
     }
 }
