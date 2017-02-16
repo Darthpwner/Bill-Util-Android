@@ -55,14 +55,56 @@ public class RentCalculatorActivity extends AppCompatActivity {
 
     //Perform calculations
     public void calculateButtonClick(View v) {
-        double monthlyBaseRentAmount = Double.parseDouble(monthlyBaseRentEditText.getText().toString());
-        double electricAmount = Double.parseDouble(electricEditText.getText().toString());
-        double gasAmount = Double.parseDouble(gasEditText.getText().toString());
-        double waterAmount = Double.parseDouble(waterEditText.getText().toString());
-        double internetAmount = Double.parseDouble(internetEditText.getText().toString());
-        double parkingSpotCostAmount = Double.parseDouble(parkingSpotCostEditText.getText().toString());
-        int numberOfRoommatesAmount = Integer.parseInt(numberOfRoommatesEditText.getText().toString());
-        int subletterAmount = Integer.parseInt(subletterEditText.getText().toString());
+        double monthlyBaseRentAmount, electricAmount, gasAmount, waterAmount, internetAmount, parkingSpotCostAmount;
+        int numberOfRoommatesAmount, subletterAmount;
+
+        if(monthlyBaseRentEditText.getText().toString().equals("")) {
+            monthlyBaseRentAmount = 0;
+        } else {
+            monthlyBaseRentAmount = Double.parseDouble(monthlyBaseRentEditText.getText().toString());
+        }
+
+        if(electricEditText.getText().toString().equals("")) {
+            electricAmount = 0;
+        } else {
+            electricAmount = Double.parseDouble(electricEditText.getText().toString());
+        }
+
+        if(gasEditText.getText().toString().equals("")) {
+            gasAmount = 0;
+        } else {
+            gasAmount = Double.parseDouble(gasEditText.getText().toString());
+        }
+
+        if(waterEditText.getText().toString().equals("")) {
+            waterAmount = 0;
+        } else {
+            waterAmount = Double.parseDouble(waterEditText.getText().toString());
+        }
+
+        if(internetEditText.getText().toString().equals("")) {
+            internetAmount = 0;
+        } else {
+            internetAmount = Double.parseDouble(internetEditText.getText().toString());
+        }
+
+        if(parkingSpotCostEditText.getText().toString().equals("")) {
+            parkingSpotCostAmount = 0;
+        } else {
+            parkingSpotCostAmount = Double.parseDouble(parkingSpotCostEditText.getText().toString());
+        }
+
+        if(numberOfRoommatesEditText.getText().toString().equals("")) {
+            numberOfRoommatesAmount = 0;
+        } else {
+            numberOfRoommatesAmount = Integer.parseInt(numberOfRoommatesEditText.getText().toString());
+        }
+
+        if(subletterEditText.getText().toString().equals("")) {
+            subletterAmount = 0;
+        } else {
+            subletterAmount = Integer.parseInt(subletterEditText.getText().toString());
+        }
 
         double totalCostAmount = monthlyBaseRentAmount + electricAmount + gasAmount + waterAmount + internetAmount - subletterAmount;
 
@@ -74,9 +116,31 @@ public class RentCalculatorActivity extends AppCompatActivity {
 
         double totalCostPerPersonAmount = totalCostAmount / (numberOfRoommatesAmount + 1);
 
+        // User controlled strings
+        String monthlyBaseRentAmountAsString = String.format("%.2f", monthlyBaseRentAmount);
+        String electricAmountAsString = String.format("%.2f", electricAmount);
+        String gasAmountAsString = String.format("%.2f", gasAmount);
+        String waterAmountAsString = String.format("%.2f", waterAmount);
+        String internetAmountAsString = String.format("%.2f", internetAmount);
+        String subletterAmountAsString = Integer.toString(subletterAmount);
+        String parkingSpotCostAmountAsString = String.format("%.2f", parkingSpotCostAmount);
+        String numberOfRoommatesAmountAsString = Integer.toString(numberOfRoommatesAmount);
+
+        // Result strings
         String totalCostAmountAsString = String.format("$" + "%.2f", totalCostAmount);
         String totalCostPerPersonAmountAsString = String.format("$" + "%.2f", totalCostPerPersonAmount);
 
+        // User controlled EditTexts
+        monthlyBaseRentEditText.setText(monthlyBaseRentAmountAsString);
+        electricEditText.setText(electricAmountAsString);
+        gasEditText.setText(gasAmountAsString);
+        waterEditText.setText(waterAmountAsString);
+        internetEditText.setText(internetAmountAsString);
+        subletterEditText.setText(subletterAmountAsString);
+        parkingSpotCostEditText.setText(parkingSpotCostAmountAsString);
+        numberOfRoommatesEditText.setText(numberOfRoommatesAmountAsString);
+
+        // Result EditTexts
         totalCostEditText.setText(totalCostAmountAsString);
         totalCostPerPersonEditText.setText(totalCostPerPersonAmountAsString);
     }
