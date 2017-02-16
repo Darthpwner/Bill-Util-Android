@@ -33,6 +33,7 @@ public class SalesTaxCalculatorActivity extends AppCompatActivity implements Ada
     // Object that gets spinner value
     Object spinnerValue;
     Map<String, Double> locationDictionary = new HashMap<String, Double>();
+    double salesTaxAmount = 4.00;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +72,7 @@ public class SalesTaxCalculatorActivity extends AppCompatActivity implements Ada
         locationDictionary.put("Alabama", 0.04);
         locationDictionary.put("Alaska", 0.00);
         locationDictionary.put("Arizona", 0.056);
+        locationDictionary.put("Arkansas", 0.065);
         locationDictionary.put("California", 0.075);
         locationDictionary.put("Colorado", 0.029);
         locationDictionary.put("Connecticut", 0.0635);
@@ -123,6 +125,14 @@ public class SalesTaxCalculatorActivity extends AppCompatActivity implements Ada
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         spinnerValue = parent.getItemAtPosition(position);
+
+        System.out.println("spinnerValue: " + spinnerValue);
+        System.out.println("locationDictionary.get(spinnerValue): " + locationDictionary.get(spinnerValue));
+        salesTaxAmount = locationDictionary.get(spinnerValue);
+        double salesTaxAmountDisplay = salesTaxAmount * 100;    // For display purposes
+        String salesTaxPercentageAsString = String.format("%.2f", salesTaxAmountDisplay);
+
+        salesTaxPercentageEditText.setText(salesTaxPercentageAsString);
     }
 
     @Override
@@ -135,20 +145,20 @@ public class SalesTaxCalculatorActivity extends AppCompatActivity implements Ada
         double billAmount = Double.parseDouble(billAmountEditText.getText().toString());
         double numberOfPeopleAmount = Double.parseDouble(numberOfPeopleEditText.getText().toString());
 
-        double salesTaxAmount = locationDictionary.get(spinnerValue);
+        salesTaxAmount = locationDictionary.get(spinnerValue);
 
         double taxCostAmount = billAmount * salesTaxAmount;
         double totalAmount = billAmount + taxCostAmount;
         double totalAmountPerPerson = totalAmount / numberOfPeopleAmount;
 
-        double salesTaxAmountDisplay = salesTaxAmount * 100;    //For display purposes
-        String salesTaxPercentageAsString = String.format("%.2f", salesTaxAmountDisplay);
+//        double salesTaxAmountDisplay = salesTaxAmount * 100;    //For display purposes
+//        String salesTaxPercentageAsString = String.format("%.2f", salesTaxAmountDisplay);
         String billAmountAsString = String.format("%.2f", billAmount);
         String taxCostAmountAsString = String.format("%.2f", taxCostAmount);
         String totalAmountAsString = String.format("%.2f", totalAmount);
         String totalAmountPerPersonAsString = String.format("%.2f", totalAmountPerPerson);
 
-        salesTaxPercentageEditText.setText(salesTaxPercentageAsString);
+//        salesTaxPercentageEditText.setText(salesTaxPercentageAsString);
         billAmountEditText.setText(billAmountAsString);
         taxCostEditText.setText(taxCostAmountAsString);
         totalEditText.setText(totalAmountAsString);
