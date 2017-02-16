@@ -134,9 +134,25 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
 
     public void calculateButtonClick(View v) {
         // Left side
-        double leftIncomeAmount = Double.parseDouble(leftIncomeEditText.getText().toString());
-        double leftBonusesAmount = Double.parseDouble(leftBonusesEditText.getText().toString());
-        double leftRSUsAmount = Double.parseDouble(leftRSUsEditText.getText().toString());
+        double leftIncomeAmount, leftBonusesAmount, leftRSUsAmount;
+
+        if(leftIncomeEditText.getText().toString().equals("")) {
+            leftIncomeAmount = 0;
+        } else {
+            leftIncomeAmount = Double.parseDouble(leftIncomeEditText.getText().toString());
+        }
+
+        if(leftBonusesEditText.getText().toString().equals("")) {
+            leftBonusesAmount = 0;
+        } else {
+            leftBonusesAmount = Double.parseDouble(leftBonusesEditText.getText().toString());
+        }
+
+        if(leftRSUsEditText.getText().toString().equals("")) {
+            leftRSUsAmount = 0;
+        } else {
+            leftRSUsAmount = Double.parseDouble(leftRSUsEditText.getText().toString());
+        }
 
         double leftAnnualSalary = 0;
 
@@ -159,11 +175,19 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
         double leftTenYearsAmount = 10 * leftAnnualSalary + leftBonusesAmount;
         double leftTwentyYearsAmount = 20 * leftAnnualSalary + leftBonusesAmount;
 
+        String leftIncomeAmountAsString = String.format("%.2f", leftIncomeAmount);
+        String leftBonusesAmountAsString = String.format("%.2f", leftBonusesAmount);
+        String leftRSUsAmountAsString = String.format("%.2f", leftRSUsAmount);
+
         String leftOneYearAmountAsString = String.format("$" + "%.2f", leftOneYearAmount);
         String leftTwoYearsAmountAsString = String.format("$" + "%.2f", leftTwoYearsAmount);
         String leftFiveYearsAmountAsString = String.format("$" + "%.2f", leftFiveYearsAmount);
         String leftTenYearsAmountAsString = String.format("$" + "%.2f", leftTenYearsAmount);
         String leftTwentyYearsAmountAsString = String.format("$" + "%.2f", leftTwentyYearsAmount);
+
+        leftIncomeEditText.setText(leftIncomeAmountAsString);
+        leftBonusesEditText.setText(leftBonusesAmountAsString);
+        leftRSUsEditText.setText(leftRSUsAmountAsString);
 
         leftOneYearEditText.setText(leftOneYearAmountAsString);
         leftTwoYearsEditText.setText(leftTwoYearsAmountAsString);
@@ -172,9 +196,25 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
         leftTwentyYearsEditText.setText(leftTwentyYearsAmountAsString);
 
         // Right side
-        double rightIncomeAmount = Double.parseDouble(rightIncomeEditText.getText().toString());
-        double rightBonusesAmount = Double.parseDouble(rightBonusesEditText.getText().toString());
-        double rightRSUsAmount = Double.parseDouble(rightRSUsEditText.getText().toString());
+        double rightIncomeAmount, rightBonusesAmount, rightRSUsAmount;
+
+        if(rightIncomeEditText.getText().toString().equals("")) {
+            rightIncomeAmount = 0;
+        } else {
+            rightIncomeAmount = Double.parseDouble(rightIncomeEditText.getText().toString());
+        }
+
+        if(rightBonusesEditText.getText().toString().equals("")) {
+            rightBonusesAmount = 0;
+        } else {
+            rightBonusesAmount = Double.parseDouble(rightBonusesEditText.getText().toString());
+        }
+
+        if(rightRSUsEditText.getText().toString().equals("")) {
+            rightRSUsAmount = 0;
+        } else {
+            rightRSUsAmount = Double.parseDouble(rightRSUsEditText.getText().toString());
+        }
 
         double rightAnnualSalary = 0;
 
@@ -197,11 +237,19 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
         double rightTenYearsAmount = 10 * rightAnnualSalary + rightBonusesAmount;
         double rightTwentyYearsAmount = 20 * rightAnnualSalary + rightBonusesAmount;
 
+        String rightIncomeAmountAsString = String.format("%.2f", rightIncomeAmount);
+        String rightBonusesAmountAsString = String.format("%.2f", rightBonusesAmount);
+        String rightRSUsAmountAsString = String.format("%.2f", rightRSUsAmount);
+
         String rightOneYearAmountAsString = String.format("$" + "%.2f", rightOneYearAmount);
         String rightTwoYearsAmountAsString = String.format("$" + "%.2f", rightTwoYearsAmount);
         String rightFiveYearsAmountAsString = String.format("$" + "%.2f", rightFiveYearsAmount);
         String rightTenYearsAmountAsString = String.format("$" + "%.2f", rightTenYearsAmount);
         String rightTwentyYearsAmountAsString = String.format("$" + "%.2f", rightTwentyYearsAmount);
+
+        rightIncomeEditText.setText(rightIncomeAmountAsString);
+        rightBonusesEditText.setText(rightBonusesAmountAsString);
+        rightRSUsEditText.setText(rightRSUsAmountAsString);
 
         rightOneYearEditText.setText(rightOneYearAmountAsString);
         rightTwoYearsEditText.setText(rightTwoYearsAmountAsString);
