@@ -124,7 +124,7 @@
         android:layout_alignStart="@+id/numberOfPeopleEditText"
         android:layout_marginStart="47dp"
         android:enabled="true"
-        android:focusable="true" />
+        android:focusable="false" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -137,7 +137,7 @@
         android:autoText="false"
         android:background="#FFCCCCCC"
         android:enabled="true"
-        android:focusable="true" />
+        android:focusable="false" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -149,7 +149,7 @@
         android:layout_alignStart="@+id/taxCostEditText"
         android:background="#FFCCCCCC"
         android:enabled="true"
-        android:focusable="true" />
+        android:focusable="false" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -161,7 +161,7 @@
         android:layout_alignStart="@+id/totalEditText"
         android:background="#FFCCCCCC"
         android:enabled="true"
-        android:focusable="true" />
+        android:focusable="false" />
 
     <Spinner
         android:layout_width="wrap_content"

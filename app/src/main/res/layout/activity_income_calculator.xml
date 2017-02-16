@@ -133,7 +133,7 @@
             android:id="@+id/leftOneYearEditText"
             android:background="#cccccc"
             android:enabled="true"
-            android:focusable="true" />
+            android:focusable="false" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -149,7 +149,7 @@
             android:id="@+id/leftTwoYearsEditText"
             android:background="#cccccc"
             android:enabled="true"
-            android:focusable="true" />
+            android:focusable="false" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -166,7 +166,7 @@
             android:layout_gravity="center_horizontal"
             android:background="#cccccc"
             android:enabled="true"
-            android:focusable="true" />
+            android:focusable="false" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -183,7 +183,7 @@
             android:layout_gravity="center_horizontal"
             android:background="#cccccc"
             android:enabled="true"
-            android:focusable="true" />
+            android:focusable="false" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -199,7 +199,7 @@
             android:id="@+id/leftTwentyYearsEditText"
             android:background="#cccccc"
             android:enabled="true"
-            android:focusable="true" />
+            android:focusable="false" />
 
     </LinearLayout>
 
@@ -303,7 +303,7 @@
             android:layout_gravity="center_horizontal"
             android:background="#cccccc"
             android:enabled="true"
-            android:focusable="true" />
+            android:focusable="false" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -320,7 +320,7 @@
             android:layout_gravity="center_horizontal"
             android:background="#cccccc"
             android:enabled="true"
-            android:focusable="true" />
+            android:focusable="false" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -337,7 +337,7 @@
             android:layout_gravity="center_horizontal"
             android:background="#cccccc"
             android:enabled="true"
-            android:focusable="true" />
+            android:focusable="false" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -354,7 +354,7 @@
             android:layout_gravity="center_horizontal"
             android:background="#cccccc"
             android:enabled="true"
-            android:focusable="true" />
+            android:focusable="false" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -371,7 +371,7 @@
             android:layout_gravity="center_horizontal"
             android:background="#cccccc"
             android:enabled="true"
-            android:focusable="true" />
+            android:focusable="false" />
 
     </LinearLayout>
 

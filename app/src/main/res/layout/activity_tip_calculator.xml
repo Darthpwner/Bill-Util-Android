@@ -123,7 +123,7 @@
         android:clickable="true"
         android:editable="true"
         android:enabled="true"
-        android:focusable="true" />
+        android:focusable="false" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -137,7 +137,7 @@
         android:clickable="true"
         android:editable="true"
         android:enabled="true"
-        android:focusable="true" />
+        android:focusable="false" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -151,7 +151,7 @@
         android:clickable="true"
         android:editable="true"
         android:enabled="true"
-        android:focusable="true" />
+        android:focusable="false" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -165,7 +165,7 @@
         android:clickable="true"
         android:editable="true"
         android:enabled="true"
-        android:focusable="true" />
+        android:focusable="false" />
 
     <Button
         android:layout_width="wrap_content"
