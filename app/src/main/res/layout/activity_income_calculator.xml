@@ -42,7 +42,24 @@
         android:layout_alignParentBottom="true"
         android:layout_toStartOf="@+id/calculateButton"
         android:layout_marginEnd="82dp"
-        android:layout_marginTop="30dp"></LinearLayout>
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Company A"
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
@@ -53,6 +70,22 @@
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/textView29"
         android:layout_marginStart="105dp"
-        android:layout_marginTop="30dp"></LinearLayout>
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Company B"
+            android:id="@+id/textView3"
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner2"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
 
 </RelativeLayout>
