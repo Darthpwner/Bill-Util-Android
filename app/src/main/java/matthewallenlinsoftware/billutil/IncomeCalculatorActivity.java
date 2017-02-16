@@ -103,23 +103,28 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
         // Right spinner setup
         rightSpinnerValue = new Object();
 
-        leftTimeIntervalSpinner = (Spinner) findViewById(R.id.leftSpinner);
-        leftTimeIntervalSpinner.setOnItemSelectedListener(this);
+        rightTimeIntervalSpinner = (Spinner) findViewById(R.id.rightSpinner);
+        rightTimeIntervalSpinner.setOnItemSelectedListener(this);
 
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> rightAdapter = ArrayAdapter.createFromResource(this,
-                R.array.leftTimeIntervalSpinner, android.R.layout.simple_spinner_item);
+                R.array.rightTimeIntervalSpinner, android.R.layout.simple_spinner_item);
         // Specify the layout to use when the list of choices appears
         rightAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        leftTimeIntervalSpinner.setAdapter(rightAdapter);
+        rightTimeIntervalSpinner.setAdapter(rightAdapter);
 
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        leftSpinnerValue = parent.getItemAtPosition(position);
+        Spinner spinner = (Spinner) parent;
 
+        if(spinner.getId() == R.id.leftSpinner) {
+            leftSpinnerValue = parent.getItemAtPosition(position);
+        } else {
+            rightSpinnerValue = parent.getItemAtPosition(position);
+        }
     }
 
     @Override
@@ -128,6 +133,7 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
     }
 
     public void calculateButtonClick(View v) {
+        // Left side
         double leftIncomeAmount = Double.parseDouble(leftIncomeEditText.getText().toString());
         double leftBonusesAmount = Double.parseDouble(leftBonusesEditText.getText().toString());
         double leftRSUsAmount = Double.parseDouble(leftRSUsEditText.getText().toString());
@@ -165,6 +171,7 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
         leftTenYearsEditText.setText(leftTenYearsAmountAsString);
         leftTwentyYearsEditText.setText(leftTwentyYearsAmountAsString);
 
+        // Right side
 
 
     }
