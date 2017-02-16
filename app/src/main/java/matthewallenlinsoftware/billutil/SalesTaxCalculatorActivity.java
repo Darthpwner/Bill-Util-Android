@@ -3,12 +3,13 @@ package matthewallenlinsoftware.billutil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-public class SalesTaxCalculatorActivity extends AppCompatActivity {
+public class SalesTaxCalculatorActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     // Clickable + Editable EditTexts
     EditText billAmountEditText;
@@ -26,6 +27,9 @@ public class SalesTaxCalculatorActivity extends AppCompatActivity {
 
     // Spinner
     Spinner locationSpinner;
+
+    // Object that gets spinner value
+    Object spinnerValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,7 @@ public class SalesTaxCalculatorActivity extends AppCompatActivity {
 
         // Spinner setup
         locationSpinner = (Spinner) findViewById(R.id.locationSpinner);
+        locationSpinner.setOnItemSelectedListener(this);
 
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -54,6 +59,16 @@ public class SalesTaxCalculatorActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         locationSpinner.setAdapter(adapter);
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        spinnerValue = parent.getItemAtPosition(position);
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 
     //Perform calculations

@@ -28,6 +28,7 @@ public class CurrencyConverterActivity extends AppCompatActivity implements Adap
     // Spinner
     Spinner currencySpinner;
 
+    // Object that gets spinner value
     Object spinnerValue;
 
     @Override
