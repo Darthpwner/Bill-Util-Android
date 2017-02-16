@@ -142,8 +142,20 @@ public class SalesTaxCalculatorActivity extends AppCompatActivity implements Ada
 
     //Perform calculations
     public void calculateButtonClick(View v) {
-        double billAmount = Double.parseDouble(billAmountEditText.getText().toString());
-        double numberOfPeopleAmount = Double.parseDouble(numberOfPeopleEditText.getText().toString());
+        double billAmount;
+        int numberOfPeopleAmount;
+
+        if(billAmountEditText.getText().toString().equals("")) {
+            billAmount = 0;
+        } else {
+            billAmount = Double.parseDouble(billAmountEditText.getText().toString());
+        }
+
+        if(numberOfPeopleEditText.getText().toString().equals("")) {
+            numberOfPeopleAmount = 1;
+        } else {
+            numberOfPeopleAmount = Integer.parseInt(numberOfPeopleEditText.getText().toString());
+        }
 
         salesTaxAmount = locationDictionary.get(spinnerValue);
 
@@ -151,15 +163,14 @@ public class SalesTaxCalculatorActivity extends AppCompatActivity implements Ada
         double totalAmount = billAmount + taxCostAmount;
         double totalAmountPerPerson = totalAmount / numberOfPeopleAmount;
 
-//        double salesTaxAmountDisplay = salesTaxAmount * 100;    //For display purposes
-//        String salesTaxPercentageAsString = String.format("%.2f", salesTaxAmountDisplay);
         String billAmountAsString = String.format("%.2f", billAmount);
+        String numberOfPeopleAmountAsString = Integer.toString(numberOfPeopleAmount);
         String taxCostAmountAsString = String.format("$" + "%.2f", taxCostAmount);
         String totalAmountAsString = String.format("$" + "%.2f", totalAmount);
         String totalAmountPerPersonAsString = String.format("$" + "%.2f", totalAmountPerPerson);
 
-//        salesTaxPercentageEditText.setText(salesTaxPercentageAsString);
         billAmountEditText.setText(billAmountAsString);
+        numberOfPeopleEditText.setText(numberOfPeopleAmountAsString);
         taxCostEditText.setText(taxCostAmountAsString);
         totalEditText.setText(totalAmountAsString);
         totalPerPersonEditText.setText(totalAmountPerPersonAsString);
