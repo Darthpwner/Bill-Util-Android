@@ -56,6 +56,18 @@
         <item>D.C.</item>
     </string-array>
 
+    <string-array name="leftTimeIntervalSpinner">
+        <item>Hourly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array>
+
+    <string-array name="rightTimeIntervalSpinner">
+        <item>Hourly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array>
+
     <string-array name="currencyConverterSpinner">
         <item>US $</item>
         <item>Euro</item>

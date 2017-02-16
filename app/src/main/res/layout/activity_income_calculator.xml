@@ -49,15 +49,143 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Company A"
-            android:id="@+id/textView2"
+            android:id="@+id/leftComanyTextView"
             android:layout_gravity="center_horizontal"
             android:textSize="24sp" />
 
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner"
-            android:layout_gravity="center_horizontal" />
+            android:id="@+id/leftSpinner"
+            android:layout_gravity="center_horizontal"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Income: "
+            android:id="@+id/leftIncomeTextView"
+            android:textSize="12sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/leftIncomeEditText"
+            android:layout_gravity="center_horizontal"
+            android:background="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bonuses (starting): "
+            android:id="@+id/leftBonusesTextView"
+            android:textSize="10sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/leftBonusesEditText"
+            android:layout_gravity="right"
+            android:background="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RSUs (yearly): "
+            android:id="@+id/leftRSUsTextView6"
+            android:textSize="12sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/leftRSUsEditText"
+            android:background="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Earnings"
+            android:id="@+id/leftEarningsTextView"
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 year: "
+            android:id="@+id/leftOneYearTextView" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/leftOneYearEditText"
+            android:background="#cccccc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 years: "
+            android:id="@+id/leftTwoYearsLeftView" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/leftTwoYearsEditText"
+            android:background="#cccccc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 years: "
+            android:id="@+id/leftFiveYearsTextView" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/leftFiveYearsEditText"
+            android:layout_gravity="center_horizontal"
+            android:background="#cccccc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 years: "
+            android:id="@+id/leftTenYearsTextView" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/leftTenYearsEditText"
+            android:layout_gravity="center_horizontal"
+            android:background="#cccccc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 years: "
+            android:id="@+id/leftTwentyYearsTextView" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/leftTwentyYearsEditText"
+            android:background="#cccccc" />
 
     </LinearLayout>
 
@@ -66,7 +194,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/rightLinearLayout"
-        android:background="#007bff"
+        android:background="#00ddff"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/textView29"
         android:layout_marginStart="105dp"
@@ -77,15 +205,147 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Company B"
-            android:id="@+id/textView3"
+            android:id="@+id/rightCompanyTextView"
             android:layout_gravity="center_horizontal"
             android:textSize="24sp" />
 
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner2"
-            android:layout_gravity="center_horizontal" />
+            android:id="@+id/rightSpinner"
+            android:layout_gravity="center_horizontal"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Income: "
+            android:id="@+id/rightIncomeTextView"
+            android:textSize="12sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/rightIncomeEditText"
+            android:layout_gravity="center_horizontal"
+            android:background="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bonuses (starting): "
+            android:id="@+id/rightBonusesTextView"
+            android:textSize="10sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/rightBonusesEditText"
+            android:layout_gravity="center_horizontal"
+            android:background="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RSUs (yearly): "
+            android:id="@+id/rightRSUsTextView"
+            android:textSize="12sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/rightRSUsEditText"
+            android:background="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Earnings"
+            android:id="@+id/rightEarningsTextView"
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 year:"
+            android:id="@+id/rightOneYearTextView" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/rightOneYearEditText"
+            android:layout_gravity="center_horizontal"
+            android:background="#cccccc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 years: "
+            android:id="@+id/rightTwoYearsTextView" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/rightTwoYearsEditText"
+            android:layout_gravity="center_horizontal"
+            android:background="#cccccc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 years: "
+            android:id="@+id/rightFiveYearsTextView" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/rightFiveYearsEditText"
+            android:layout_gravity="center_horizontal"
+            android:background="#cccccc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 years: "
+            android:id="@+id/rightTenYearsTextView" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/rightTenYearsEditText"
+            android:layout_gravity="center_horizontal"
+            android:background="#cccccc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20 years: "
+            android:id="@+id/rightTwentyYearsTextView" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/rightTwentyYearsEditText"
+            android:layout_gravity="center_horizontal"
+            android:background="#cccccc" />
+
     </LinearLayout>
 
 </RelativeLayout>
