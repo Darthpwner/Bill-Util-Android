@@ -30,7 +30,8 @@
         android:textSize="11sp"
         android:layout_alignBottom="@+id/textView29"
         android:layout_alignParentEnd="true"
-        android:layout_marginLeft="10dp" />
+        android:layout_marginLeft="10dp"
+        android:onClick="calculateButtonClick" />
 
     <LinearLayout
         android:orientation="vertical"

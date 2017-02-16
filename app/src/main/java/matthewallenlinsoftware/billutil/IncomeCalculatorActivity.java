@@ -10,6 +10,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 public class IncomeCalculatorActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    final double HOURS_PER_YEAR = 2080.0;
+    final double MONTHS_PER_YEAR = 12.0;
+
     // Button
     Button calculateButton;
 
@@ -104,6 +107,10 @@ public class IncomeCalculatorActivity extends AppCompatActivity implements Adapt
     }
 
     public void calculateButtonClick(View v) {
+        double leftIncomeAmount = Double.parseDouble(leftIncomeEditText.getText().toString());
+        double leftBonusesAmount = Double.parseDouble(leftBonusesEditText.getText().toString());
+        double leftRSUsAmount = Double.parseDouble(leftRSUsEditText.getText().toString());
+
         
     }
 }
