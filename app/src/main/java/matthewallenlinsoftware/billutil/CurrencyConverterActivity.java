@@ -83,7 +83,12 @@ public class CurrencyConverterActivity extends AppCompatActivity implements Adap
         double francAmount = 0;
         double canadianDollarAmount = 0;
 
-        double queryAmount = Double.parseDouble(currentCurrencyEditText.getText().toString());
+        double queryAmount;
+        if(currentCurrencyEditText.getText().toString().equals("")) {
+            queryAmount = 0;
+        } else {
+            queryAmount = Double.parseDouble(currentCurrencyEditText.getText().toString());
+        }
 
         System.out.println(spinnerValue.toString());
         String currencyValue = spinnerValue.toString();
@@ -146,12 +151,16 @@ public class CurrencyConverterActivity extends AppCompatActivity implements Adap
                 break;
         }
 
+        String queryAmountAsString = String.format("%.2f", queryAmount);
+
         String usDollarAmountAsString = String.format("%.2f", usDollarAmount);
         String euroAmountAsString = String.format("%.2f", euroAmount);
         String yenAmountAsString = String.format("%.2f", yenAmount);
         String poundAmountAsString = String.format("%.2f", poundAmount);
         String francAmountAsString = String.format("%.2f", francAmount);
         String canadianDollarAmountAsString = String.format("%.2f", canadianDollarAmount);
+
+        currentCurrencyEditText.setText(queryAmountAsString);
 
         usDollarEditText.setText(usDollarAmountAsString);
         euroEditText.setText(euroAmountAsString);
