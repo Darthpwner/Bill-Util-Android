@@ -165,6 +165,7 @@
         android:layout_toEndOf="@+id/currencyConverterTextView"
         android:textColor="#035fff"
         android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp"
+        android:onClick="convertButtonClick" />
 
 </RelativeLayout>

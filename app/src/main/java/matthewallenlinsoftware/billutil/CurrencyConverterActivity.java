@@ -2,6 +2,7 @@ package matthewallenlinsoftware.billutil;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -28,6 +29,8 @@ public class CurrencyConverterActivity extends AppCompatActivity implements Adap
     // Spinner
     Spinner currencySpinner;
 
+    Object spinnerValue;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,8 +49,11 @@ public class CurrencyConverterActivity extends AppCompatActivity implements Adap
         // Initialize Button
         convertButton = (Button) findViewById(R.id.convertButton);
 
+        spinnerValue = new Object();
+
         // Spinner setup
         currencySpinner = (Spinner) findViewById(R.id.currencySpinner);
+        currencySpinner.setOnItemSelectedListener(this);
 
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -60,7 +66,7 @@ public class CurrencyConverterActivity extends AppCompatActivity implements Adap
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+        spinnerValue = parent.getItemAtPosition(position);
     }
 
     @Override
@@ -70,6 +76,9 @@ public class CurrencyConverterActivity extends AppCompatActivity implements Adap
 
     // Perform conversions
     public void convertButtonClick(View v) {
+
+        Log.d("FUCK", "BITCH");
+        System.out.println(spinnerValue.toString());
 
         String temp = "";
         switch (temp) {
