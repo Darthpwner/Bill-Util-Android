@@ -68,8 +68,21 @@ public class TipCalculatorActivity extends AppCompatActivity {
 
     //Perform calculations
     public void calculateButtonClick(View v) {
-        double billAmount = Double.parseDouble(billAmountEditText.getText().toString());
-        double numberOfPeopleAmount = Double.parseDouble(numberOfPeopleEditText.getText().toString());
+        double billAmount;
+        int numberOfPeopleAmount;
+
+        if(billAmountEditText.getText().toString().equals("")) {
+            billAmount = 0;
+        } else {
+            billAmount = Double.parseDouble(billAmountEditText.getText().toString());
+        }
+
+        if(numberOfPeopleEditText.getText().toString().equals("")) {
+            numberOfPeopleAmount = 1;
+        } else {
+            numberOfPeopleAmount = Integer.parseInt(numberOfPeopleEditText.getText().toString());
+        }
+
 
         double tipPercentage = tipPercentageSeekBar.getProgress() * .01;
 
@@ -79,12 +92,14 @@ public class TipCalculatorActivity extends AppCompatActivity {
         double totalAmountPerPerson = totalAmount / numberOfPeopleAmount;
 
         String billAmountAsString = String.format("%.2f", billAmount);
+        String numberOfPeopleAmountAsString = Integer.toString(numberOfPeopleAmount);
         String tipAmountAsString = String.format("$" + "%.2f", tipAmount);
         String totalAmountAsString = String.format("$" + "%.2f", totalAmount);
         String tipAmountPerPersonAsString = String.format("$" + "%.2f", tipAmountPerPerson);
         String totalPerPersonAsString = String.format("$" + "%.2f", totalAmountPerPerson);
 
         billAmountEditText.setText(billAmountAsString);
+        numberOfPeopleEditText.setText(numberOfPeopleAmountAsString);
         tipAmountEditText.setText(tipAmountAsString);
         totalEditText.setText(totalAmountAsString);
         tipAmountPerPersonEditText.setText(tipAmountPerPersonAsString);
