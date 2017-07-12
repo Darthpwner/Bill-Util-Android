@@ -21,66 +21,62 @@
         android:layout_centerHorizontal="true"
         android:textColor="#000000"
         android:gravity="center_horizontal"
-        android:id="@+id/textView" />
+        android:id="@+id/textView"
+        android:textStyle="italic" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calculate Tip"
         android:id="@+id/button"
-        android:layout_marginTop="52dp"
         android:textColor="#00a6ff"
-        android:background="@null"
+        android:background="@drawable/tip_calculator"
         android:textStyle="bold"
+        android:onClick="onClickTipCalculator"
         android:layout_below="@+id/textView"
-        android:layout_alignStart="@+id/button2"
-        android:onClick="onClickTipCalculator" />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calculate Sales Tax"
         android:id="@+id/button2"
         android:textColor="#00a6ff"
-        android:background="@null"
+        android:background="@drawable/sales_tax"
         android:textStyle="bold"
-        android:layout_below="@+id/button"
-        android:layout_alignStart="@+id/button3"
-        android:onClick="onClickSalesTaxCalculator" />
+        android:onClick="onClickSalesTaxCalculator"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calculate Income"
         android:id="@+id/button3"
         android:textColor="#00a6ff"
         android:textStyle="bold"
-        android:background="@null"
-        android:layout_below="@+id/button2"
-        android:layout_alignStart="@+id/button4"
-        android:onClick="onClickIncomeCalculator" />
+        android:background="@drawable/income_calculator"
+        android:onClick="onClickIncomeCalculator"
+        android:layout_below="@+id/button"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Convert Currency"
         android:id="@+id/button4"
         android:textColor="#00a6ff"
         android:textStyle="bold"
-        android:background="@null"
-        android:layout_below="@+id/button3"
-        android:layout_alignStart="@+id/button5"
-        android:onClick="onClickCurrencyConverter" />
+        android:background="@drawable/currency_converter"
+        android:onClick="onClickCurrencyConverter"
+        android:layout_alignTop="@+id/button3"
+        android:layout_alignStart="@+id/button2" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calculate Rent"
         android:id="@+id/button5"
-        android:layout_below="@+id/button4"
-        android:layout_centerHorizontal="true"
         android:textColor="#00a6ff"
         android:textStyle="bold"
-        android:background="@null"
-        android:onClick="onClickRentCalculator" />
+        android:background="@drawable/rent_calculator"
+        android:onClick="onClickRentCalculator"
+        android:layout_below="@+id/button3"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
