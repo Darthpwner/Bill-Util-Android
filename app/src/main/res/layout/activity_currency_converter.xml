@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="matthewallenlinsoftware.billutil.CurrencyConverterActivity"
-    android:background="#f2eced"
+    android:background="#d9ffff"
     android:clickable="true">
 
     <TextView
@@ -18,7 +18,8 @@
         android:id="@+id/currencyConverterTextView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -28,7 +29,8 @@
         android:layout_marginTop="25dp"
         android:layout_below="@+id/currencyConverterTextView"
         android:layout_alignEnd="@+id/currencyConverterTextView"
-        android:layout_marginEnd="57dp" />
+        android:layout_marginEnd="57dp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,7 +39,8 @@
         android:id="@+id/euroTextView"
         android:layout_marginTop="28dp"
         android:layout_below="@+id/usDollarTextView"
-        android:layout_alignStart="@+id/usDollarTextView" />
+        android:layout_alignStart="@+id/usDollarTextView"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -46,7 +49,8 @@
         android:id="@+id/yenTextView"
         android:layout_marginTop="29dp"
         android:layout_below="@+id/euroTextView"
-        android:layout_alignStart="@+id/euroTextView" />
+        android:layout_alignStart="@+id/euroTextView"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -55,7 +59,8 @@
         android:id="@+id/poundTextView"
         android:layout_below="@+id/yenTextView"
         android:layout_alignStart="@+id/yenTextView"
-        android:layout_marginTop="26dp" />
+        android:layout_marginTop="26dp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -63,7 +68,8 @@
         android:text="Franc"
         android:id="@+id/francTextView"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/poundTextView" />
+        android:layout_alignStart="@+id/poundTextView"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -72,7 +78,8 @@
         android:id="@+id/canadianDollarTextView"
         android:layout_below="@+id/francTextView"
         android:layout_alignStart="@+id/francTextView"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="25dp"
+        android:textColor="#000000" />
 
     <EditText
         android:layout_width="wrap_content"

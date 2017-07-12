@@ -19,7 +19,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="50dp"
-        android:textSize="17sp" />
+        android:textSize="17sp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,7 +30,8 @@
         android:layout_below="@+id/monthlyBaseRentTextView"
         android:layout_alignParentStart="true"
         android:textSize="17sp"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,7 +41,8 @@
         android:textSize="17sp"
         android:layout_below="@+id/electricTextView"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -49,7 +52,8 @@
         android:textSize="17sp"
         android:layout_below="@+id/gasTextView"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -59,7 +63,8 @@
         android:textSize="17sp"
         android:layout_below="@+id/waterTextView"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -69,7 +74,8 @@
         android:textSize="17sp"
         android:layout_below="@+id/internetTextView"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -79,7 +85,8 @@
         android:textSize="17sp"
         android:layout_below="@+id/subletterTextView"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="25dp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -89,7 +96,8 @@
         android:textSize="17sp"
         android:layout_below="@+id/parkingSpotCostTextView"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -99,7 +107,8 @@
         android:textSize="17sp"
         android:layout_below="@+id/parkingSpotSubleasedTextView"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -109,7 +118,8 @@
         android:textSize="17sp"
         android:layout_below="@+id/numberOfRoommatesTextView"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -119,7 +129,8 @@
         android:textSize="17sp"
         android:layout_below="@+id/totalCostTextView"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -128,7 +139,8 @@
         android:id="@+id/rentCalculatorTextView"
         android:textSize="24sp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -136,7 +148,7 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/monthlyBaseRentEditText"
-        android:background="#ff0000"
+        android:background="#ffffff"
         android:layout_alignBottom="@+id/monthlyBaseRentTextView"
         android:layout_alignStart="@+id/electricEditText"
         android:text="0" />
@@ -147,7 +159,7 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/electricEditText"
-        android:background="#ff0000"
+        android:background="#ffffff"
         android:layout_alignTop="@+id/electricTextView"
         android:layout_alignStart="@+id/gasEditText"
         android:text="0" />
@@ -158,7 +170,7 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/gasEditText"
-        android:background="#ff0000"
+        android:background="#ffffff"
         android:layout_above="@+id/waterTextView"
         android:layout_alignStart="@+id/waterEditText"
         android:text="0" />
@@ -169,7 +181,7 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/waterEditText"
-        android:background="#ff0000"
+        android:background="#ffffff"
         android:layout_alignTop="@+id/waterTextView"
         android:layout_alignStart="@+id/internetEditText"
         android:text="0" />
@@ -180,7 +192,7 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/internetEditText"
-        android:background="#ff0000"
+        android:background="#ffffff"
         android:layout_above="@+id/subletterTextView"
         android:layout_alignStart="@+id/parkingSpotCostEditText"
         android:text="0" />
@@ -193,7 +205,7 @@
         android:id="@+id/parkingSpotCostEditText"
         android:layout_above="@+id/parkingSpotSubleasedTextView"
         android:layout_toEndOf="@+id/parkingSpotSubleasedTextView"
-        android:background="#ffb700"
+        android:background="#ffffff"
         android:text="0" />
 
     <Switch
@@ -227,7 +239,7 @@
         android:id="@+id/subletterEditText"
         android:layout_centerVertical="true"
         android:layout_alignStart="@+id/internetEditText"
-        android:background="#ffea00"
+        android:background="#ffffff"
         android:text="0" />
 
     <EditText

@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="matthewallenlinsoftware.billutil.IncomeCalculatorActivity"
-    android:background="#f2eced">
+    android:background="#c8ddf7">
 
     <TextView
         android:layout_width="wrap_content"
@@ -18,7 +18,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textSize="22sp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp"
+        android:textColor="#000000" />
 
     <Button
         android:layout_width="wrap_content"
@@ -38,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contextClickable="false"
-        android:background="#ff0000"
+        android:background="#cd95f7"
         android:id="@+id/leftLinearLayout"
         android:layout_alignParentBottom="true"
         android:layout_toStartOf="@+id/calculateButton"
@@ -52,7 +53,8 @@
             android:text="Company A"
             android:id="@+id/leftComanyTextView"
             android:layout_gravity="center_horizontal"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="#000000" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -66,7 +68,8 @@
             android:layout_height="wrap_content"
             android:text="Income: "
             android:id="@+id/leftIncomeTextView"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
@@ -83,7 +86,8 @@
             android:layout_height="wrap_content"
             android:text="Bonuses (starting): "
             android:id="@+id/leftBonusesTextView"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
@@ -100,7 +104,8 @@
             android:layout_height="wrap_content"
             android:text="RSUs (yearly): "
             android:id="@+id/leftRSUsTextView6"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
@@ -117,13 +122,15 @@
             android:text="Earnings"
             android:id="@+id/leftEarningsTextView"
             android:layout_gravity="center_horizontal"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="#000000" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1 year: "
-            android:id="@+id/leftOneYearTextView" />
+            android:id="@+id/leftOneYearTextView"
+            android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
@@ -131,7 +138,7 @@
             android:inputType="numberDecimal"
             android:ems="10"
             android:id="@+id/leftOneYearEditText"
-            android:background="#cccccc"
+            android:background="#9e7bd3"
             android:enabled="true"
             android:focusable="false" />
 
@@ -139,7 +146,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2 years: "
-            android:id="@+id/leftTwoYearsLeftView" />
+            android:id="@+id/leftTwoYearsLeftView"
+            android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
@@ -147,7 +155,7 @@
             android:inputType="numberDecimal"
             android:ems="10"
             android:id="@+id/leftTwoYearsEditText"
-            android:background="#cccccc"
+            android:background="#FF9E7BD3"
             android:enabled="true"
             android:focusable="false" />
 
@@ -155,7 +163,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5 years: "
-            android:id="@+id/leftFiveYearsTextView" />
+            android:id="@+id/leftFiveYearsTextView"
+            android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
@@ -164,7 +173,7 @@
             android:ems="10"
             android:id="@+id/leftFiveYearsEditText"
             android:layout_gravity="center_horizontal"
-            android:background="#cccccc"
+            android:background="#FF9E7BD3"
             android:enabled="true"
             android:focusable="false" />
 
@@ -172,7 +181,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="10 years: "
-            android:id="@+id/leftTenYearsTextView" />
+            android:id="@+id/leftTenYearsTextView"
+            android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
@@ -181,7 +191,7 @@
             android:ems="10"
             android:id="@+id/leftTenYearsEditText"
             android:layout_gravity="center_horizontal"
-            android:background="#cccccc"
+            android:background="#FF9E7BD3"
             android:enabled="true"
             android:focusable="false" />
 
@@ -189,7 +199,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20 years: "
-            android:id="@+id/leftTwentyYearsTextView" />
+            android:id="@+id/leftTwentyYearsTextView"
+            android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
@@ -197,7 +208,7 @@
             android:inputType="numberDecimal"
             android:ems="10"
             android:id="@+id/leftTwentyYearsEditText"
-            android:background="#cccccc"
+            android:background="#FF9E7BD3"
             android:enabled="true"
             android:focusable="false" />
 
@@ -208,7 +219,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/rightLinearLayout"
-        android:background="#00ddff"
+        android:background="#cd95f7"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/textView29"
         android:layout_marginStart="105dp"
@@ -221,7 +232,8 @@
             android:text="Company B"
             android:id="@+id/rightCompanyTextView"
             android:layout_gravity="center_horizontal"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="#000000" />
 
         <Spinner
             android:layout_width="match_parent"
@@ -235,7 +247,8 @@
             android:layout_height="wrap_content"
             android:text="Income: "
             android:id="@+id/rightIncomeTextView"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
@@ -252,7 +265,8 @@
             android:layout_height="wrap_content"
             android:text="Bonuses (starting): "
             android:id="@+id/rightBonusesTextView"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
@@ -269,7 +283,8 @@
             android:layout_height="wrap_content"
             android:text="RSUs (yearly): "
             android:id="@+id/rightRSUsTextView"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
@@ -286,13 +301,15 @@
             android:text="Earnings"
             android:id="@+id/rightEarningsTextView"
             android:layout_gravity="center_horizontal"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textColor="#000000" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1 year:"
-            android:id="@+id/rightOneYearTextView" />
+            android:id="@+id/rightOneYearTextView"
+            android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
@@ -301,7 +318,7 @@
             android:ems="10"
             android:id="@+id/rightOneYearEditText"
             android:layout_gravity="center_horizontal"
-            android:background="#cccccc"
+            android:background="#FF9E7BD3"
             android:enabled="true"
             android:focusable="false" />
 
@@ -309,7 +326,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2 years: "
-            android:id="@+id/rightTwoYearsTextView" />
+            android:id="@+id/rightTwoYearsTextView"
+            android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
@@ -318,7 +336,7 @@
             android:ems="10"
             android:id="@+id/rightTwoYearsEditText"
             android:layout_gravity="center_horizontal"
-            android:background="#cccccc"
+            android:background="#FF9E7BD3"
             android:enabled="true"
             android:focusable="false" />
 
@@ -326,7 +344,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5 years: "
-            android:id="@+id/rightFiveYearsTextView" />
+            android:id="@+id/rightFiveYearsTextView"
+            android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
@@ -335,7 +354,7 @@
             android:ems="10"
             android:id="@+id/rightFiveYearsEditText"
             android:layout_gravity="center_horizontal"
-            android:background="#cccccc"
+            android:background="#FF9E7BD3"
             android:enabled="true"
             android:focusable="false" />
 
@@ -343,7 +362,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="10 years: "
-            android:id="@+id/rightTenYearsTextView" />
+            android:id="@+id/rightTenYearsTextView"
+            android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
@@ -352,7 +372,7 @@
             android:ems="10"
             android:id="@+id/rightTenYearsEditText"
             android:layout_gravity="center_horizontal"
-            android:background="#cccccc"
+            android:background="#FF9E7BD3"
             android:enabled="true"
             android:focusable="false" />
 
@@ -360,7 +380,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20 years: "
-            android:id="@+id/rightTwentyYearsTextView" />
+            android:id="@+id/rightTwentyYearsTextView"
+            android:textColor="#000000" />
 
         <EditText
             android:layout_width="match_parent"
@@ -369,7 +390,7 @@
             android:ems="10"
             android:id="@+id/rightTwentyYearsEditText"
             android:layout_gravity="center_horizontal"
-            android:background="#cccccc"
+            android:background="#FF9E7BD3"
             android:enabled="true"
             android:focusable="false" />
 

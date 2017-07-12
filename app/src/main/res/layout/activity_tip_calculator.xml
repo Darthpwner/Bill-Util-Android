@@ -18,7 +18,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="56dp"
-        android:textSize="17sp" />
+        android:textSize="17sp"
+        android:textColor="FF000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -28,7 +29,8 @@
         android:layout_below="@+id/billAmountTextView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="36dp"
-        android:textSize="17sp" />
+        android:textSize="17sp"
+        android:textColor="FF000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,7 +41,8 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
         android:textSize="17sp"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"
+        android:textColor="FF000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,7 +51,8 @@
         android:id="@+id/tipAmountTextView"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
-        android:textSize="17sp" />
+        android:textSize="17sp"
+        android:textColor="FF000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -58,27 +62,30 @@
         android:layout_below="@+id/tipAmountTextView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="39dp"
-        android:textSize="17sp" />
+        android:textSize="17sp"
+        android:textColor="FF000000" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tip Amount Per Person: "
+        android:text="Tip/Person: "
         android:id="@+id/tipAmountPerPersonTextView"
         android:layout_below="@+id/totalTextView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="36dp"
-        android:textSize="17sp" />
+        android:textSize="17sp"
+        android:textColor="FF000000" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total Per Person:"
+        android:text="Total/Person:"
         android:id="@+id/totalPerPersonTextView"
         android:layout_below="@+id/tipAmountPerPersonTextView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="31dp"
-        android:textSize="17sp" />
+        android:textSize="17sp"
+        android:textColor="FF000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -87,7 +94,8 @@
         android:id="@+id/tipCalculatorTextView"
         android:textSize="24sp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -117,13 +125,13 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/tipAmountEditText"
-        android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/tipAmountPerPersonTextView"
-        android:background="#FFCCCCCC"
+        android:background="#dcad4f"
         android:clickable="true"
         android:editable="true"
         android:enabled="true"
-        android:focusable="false" />
+        android:focusable="false"
+        android:layout_alignBottom="@+id/tipAmountTextView"
+        android:layout_alignEnd="@+id/calculateButton" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -131,7 +139,7 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/totalEditText"
-        android:background="#FFCCCCCC"
+        android:background="#dcad4f"
         android:layout_alignBottom="@+id/totalTextView"
         android:layout_alignStart="@+id/tipAmountEditText"
         android:clickable="true"
@@ -145,7 +153,7 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/tipAmountPerPersonEditText"
-        android:background="#FFCCCCCC"
+        android:background="#dcad4f"
         android:layout_alignBottom="@+id/tipAmountPerPersonTextView"
         android:layout_alignStart="@+id/totalEditText"
         android:clickable="true"
@@ -159,13 +167,13 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/totalPerPersonEditText"
-        android:layout_alignTop="@+id/totalPerPersonTextView"
-        android:layout_toEndOf="@+id/tipAmountPerPersonTextView"
-        android:background="#FFCCCCCC"
+        android:background="#dcad4f"
         android:clickable="true"
         android:editable="true"
         android:enabled="true"
-        android:focusable="false" />
+        android:focusable="false"
+        android:layout_alignBottom="@+id/totalPerPersonTextView"
+        android:layout_alignStart="@+id/tipAmountPerPersonEditText" />
 
     <Button
         android:layout_width="wrap_content"

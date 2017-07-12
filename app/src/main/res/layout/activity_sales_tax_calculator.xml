@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="matthewallenlinsoftware.billutil.SalesTaxCalculatorActivity"
-    android:background="#f2eced">
+    android:background="#d2f4fa">
 
     <TextView
         android:layout_width="wrap_content"
@@ -18,7 +18,8 @@
         android:textSize="17sp"
         android:layout_marginTop="79dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -28,7 +29,8 @@
         android:textSize="17sp"
         android:layout_below="@+id/billAmountTextView"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="24dp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,7 +39,8 @@
         android:id="@+id/salesTaxTextView"
         android:textSize="17sp"
         android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -47,7 +50,8 @@
         android:layout_marginTop="25dp"
         android:textSize="17sp"
         android:layout_below="@+id/salesTaxPercentageEditText"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -57,7 +61,8 @@
         android:textSize="17sp"
         android:layout_below="@+id/taxCostTextView"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="24dp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -67,7 +72,8 @@
         android:textSize="17sp"
         android:layout_below="@+id/totalTextView"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="27dp" />
+        android:layout_marginTop="27dp"
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -76,7 +82,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textSize="22sp"
-        android:id="@+id/salesTaxCalculatorTextView" />
+        android:id="@+id/salesTaxCalculatorTextView"
+        android:textColor="#000000" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -118,7 +125,7 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/salesTaxPercentageEditText"
-        android:background="#FFCCCCCC"
+        android:background="#65add3"
         android:text="4.0"
         android:layout_alignBottom="@+id/salesTaxTextView"
         android:layout_alignStart="@+id/numberOfPeopleEditText"
@@ -135,7 +142,7 @@
         android:layout_alignTop="@+id/taxCostTextView"
         android:layout_alignStart="@+id/salesTaxPercentageEditText"
         android:autoText="false"
-        android:background="#FFCCCCCC"
+        android:background="#65add3"
         android:enabled="true"
         android:focusable="false" />
 
@@ -147,7 +154,7 @@
         android:id="@+id/totalEditText"
         android:layout_alignTop="@+id/totalTextView"
         android:layout_alignStart="@+id/taxCostEditText"
-        android:background="#FFCCCCCC"
+        android:background="#65add3"
         android:enabled="true"
         android:focusable="false" />
 
@@ -159,7 +166,7 @@
         android:id="@+id/totalPerPersonEditText"
         android:layout_alignTop="@+id/totalPerPersonTextView"
         android:layout_alignStart="@+id/totalEditText"
-        android:background="#FFCCCCCC"
+        android:background="#65add3"
         android:enabled="true"
         android:focusable="false" />
 
